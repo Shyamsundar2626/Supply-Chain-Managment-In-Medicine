@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakequipo</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index-contents.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+</head>
+<body>
+    <!-- Navigaton bar -->
+    <header id="topnav">
+        <div class="inner">
+          <div class="logo">Fakequipo</div>
+            <nav role='navigation'>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Sign In
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Consumer</a>
+                      <a href="#">Supplier</a>
+                      <a href="#">Manufacturer</a>
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Register
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Consumer</a>
+                      <a href="#">Supplier</a>
+                      <a href="#">Manufacturer</a>
+                    </div>
+                </div> 
+                <li><a href="#about">About</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+              </ul>
+            </nav>
+        </div>
+      </header>
+      <div class="pimg1" style = "background-image: url('img2.jpg'); min-height: 80%">
+        <div class="welcome-text">
+            <h1>Fake<span>Quipo</span></h1>
+            <h2>Save yourself from being counterfeited</h2>
+        </div>
+      </div>
+      <!-- About Section -->
+      <a name="about"></a>
+    <section class="section section-light">		
+        <h2>About</h2>
+        <p>We are group of developers trying to stop counterfeit medicine trading in our market. Our vision is to provide safe and appropriate medicine in trade and our mission is to establish traceability and transparency in pharma trading with fully secured technology.</p>
+    </section>
+    <section class="section section-light">		
+        <h2>How does the website work?</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ABB_5R9UC40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <a name="contactus"></a>
+    <section class="section section-dark">		
+      <h3 style="font-size: 30px;">Contact Us</h3>
+  
+<div class="container">
+  <form action="">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="india">India</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+    <label for="Feedback">Feedback</label>
+    <textarea id="Feedback" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</section>
+</body>
+</html>

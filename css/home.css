@@ -1,0 +1,178 @@
+
+  
+  /* //////////////////////// CONTENTS ///////////////////////////// */
+       body, html{
+      height: 100%;
+      margin: 0;
+      /* font-family: 'Poppins', sans-serif; */
+      font-size: 16px;
+      font-weight: 400;
+       line-height: 1.8em; 
+      color: #666;
+  } 
+  
+  
+  .pimg1, .pimg2{
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity:0.90;
+      /*this is what make us have that parallax effects 
+      if we wanna remove that effect we have to set to scroll */
+      background-attachment: fixed;
+  } 
+  
+  .section{
+      text-align: center;
+      padding : 50px 80px;
+  }
+  
+  .section-light{
+      background-color: #f2f2f2;
+      color:black;
+  }
+  
+  .section-dark{	
+      /* background-color: #4c4c4c; */
+      background-color: black;
+      color: #ddd; 
+  }
+
+.welcome-text {
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	margin: 10% 30%;
+	text-align: left;
+}
+.welcome-text h1 {
+	text-align: justify;
+    margin-left:-370px;
+	margin-top: 70px;
+	color: yellow;
+	text-transform: uppercase;
+	font-size: 90px;
+}
+.welcome-text h1 span {
+	color: whitesmoke
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color:#fff;
+}
+.welcome-text h2{
+	font-size: 20px;
+	margin-top: -5px;
+	margin-left: -300px;
+	color:white;
+	font-family: Zapf Chancery,cursive; 
+	font-weight: 9px;
+	font-variant: inherit;
+	font-stretch: ultra-expanded;
+	
+}
+
+  .ptext{
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      font-size: 27px;
+      /* color: #000; */
+      color: black;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+  
+  }
+  
+  .ptext1{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    /* text-align: center; */
+    font-size: 27px;
+    /* color: #000; */
+    color: black;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+}
+
+  .ptext .border{
+      background-color: black;
+      color: #fff;
+      padding: 20px;
+      font-weight: 500;
+  }
+  
+  .ptext .border.trans{
+      /* background-color: transparent; */
+      background-color: #fff;
+      color: black;
+      padding: 20px;
+      font-weight: 500;
+  }
+  .ptext .border.trans1{
+      background-color: transparent;
+  }
+  
+  @media(max-width : 568px){
+      .pimg1, .pimg2, .pimg{
+          background-attachment: scroll;
+      }
+  }
+  
+  h2 {
+      font-size: 30px;
+  }
+  
+  p {
+      font-size: 20px;
+  }
+
+ /* /////////Contact form ///////////////// */
+ * {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: left;
+  color:black;
+}
+  
