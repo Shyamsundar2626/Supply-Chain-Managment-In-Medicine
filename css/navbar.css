@@ -16,8 +16,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-size:20px
-    line-height: 1.5;
+    font-size:20px;
+    line-height:1.5;
     
 }
 
@@ -87,7 +87,7 @@ nav a:hover {
 }
 .logo img {
     height:70px;
-    width:90px
+    width:90px;
 	opacity: 1;
 	padding: 0px 0;
     border-radius:180px;
