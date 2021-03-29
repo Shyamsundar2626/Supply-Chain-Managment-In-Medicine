@@ -6,7 +6,7 @@
   
 ::selection {
     background: #000;
-    color: #aaf;
+    color:grey;
 }
 .alternate ::selection {
     background: #c00;
@@ -16,7 +16,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size:20px
     line-height: 1.5;
     
 }
@@ -24,10 +24,11 @@ body {
 ul, li, .logo {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
+    font-weight: 150;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: cursive;
+    font-size:20px;
 }
 
 .inner {
@@ -45,7 +46,8 @@ header {
 }
 
 li {
-    list-style: none;
+    list-style: none; 
+    font-family: cursive;
     font-size: 20px;
 }
 
@@ -71,23 +73,24 @@ nav a {
 }
 
 nav a:hover {
-    background:grey;
+    background:peachpuff;
+    color:black;
 }
 
 .logo
 {
-        color: white;
-        font-size: 40px;
-        line-height: 50px;
-        transition: 0.7s all;
-        padding: 15px 0px;
+    float:left; 
+    margin-left: 0px;
 }
-.logo {
-	float: left;
+.logo{
+    margin:0px;
 }
 .logo img {
-	width: 42%;
+    height:70px;
+    width:90px
+	opacity: 1;
 	padding: 0px 0;
+    border-radius:180px;
 }
 
 .dropdown {
@@ -96,6 +99,7 @@ nav a:hover {
   }
   
   .dropdown .dropbtn {
+     font-family: cursive; 
     font-size: 20px;  
     border: none;
     outline: none;
@@ -107,13 +111,15 @@ nav a:hover {
   }
   
    .dropdown:hover .dropbtn {
-    background-color:grey;
+    background-color:peachpuff;
+    color:#000;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+    border-radius: 4px 4px 10px 10px;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -129,7 +135,8 @@ nav a:hover {
   }
   
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color:peachpuff;
+    color:#000;
   }
   
   .dropdown:hover .dropdown-content {
