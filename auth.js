@@ -7,18 +7,21 @@ signupForm.addEventListener('submit',(e) => {
     const password = signupForm['signup-password'].value;
     
     //sign up the user
-    auth.createUserWithEmailAndPassword(email,password).then(cred =>{
+    auth.createUserWithEmailAndPassword(email,password)
+    .then(cred =>{
         console.log(cred.user); 
         window.alert("Account Created Sucessfully!!");
         const modal = document.querySelector('#sign-up'); 
 
-    });
-});catch(function(error){
-
-    var errorcode=error.code;
-    var errormsg=error.message;
-
-});    
+    }) 
+    .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        window.alert("Email id Already Exist"); 
+        signupForm.reset();
+    
+    })
+});
 
 
 const signinForm = document.querySelector('#signin-form');
@@ -30,9 +33,16 @@ signinForm.addEventListener('submit',(e) => {
     const password = signinForm['signin-password'].value;
 
     //sign up the user 
-    auth.signInWithEmailAndPassword(email,password).then(cred =>{
+    auth.signInWithEmailAndPassword(email,password)
+    .then(cred =>{
         console.log(cred.user); 
         window.alert("Logged In successfully!!");
         const modal = document.querySelector('#sign-in');  
-    }); 
+    })
+    .catch((error) => {
+        var errorCode = error.code; 
+        var errorMessage = error.message; 
+        window.alert("Invalid Email id");
+        signinForm.reset();
+    })
 });
