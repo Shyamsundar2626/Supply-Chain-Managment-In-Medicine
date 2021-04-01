@@ -1,3 +1,5 @@
+/////////////////////////CHATBOT///////////////////////////////
+
 window.watsonAssistantChatOptions = {
       integrationID: "7864fd24-2f41-48f2-b8ea-bc2454c8e1d4", // The ID of this integration.
       region: "eu-gb", // The region your integration is hosted in.
