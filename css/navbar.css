@@ -73,8 +73,11 @@ nav a {
 }
 
 nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #000;
     background:peachpuff;
-    color:black;
+    color:black; 
+    font-size: 25px;
 }
 
 .logo
@@ -110,9 +113,12 @@ nav a:hover {
     margin: 0;
   }
   
-   .dropdown:hover .dropbtn {
+   .dropdown:hover .dropbtn { 
+    text-decoration: underline;
+    text-decoration-color: #000;
     background-color:peachpuff;
     color:#000;
+    font-size: 25px;
   }
   
   .dropdown-content {
