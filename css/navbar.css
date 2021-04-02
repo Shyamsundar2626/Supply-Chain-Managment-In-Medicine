@@ -77,7 +77,8 @@ nav a:hover {
     text-decoration-color: #000;
     background:peachpuff;
     color:black; 
-    font-size: 25px;
+    font-size: 22px;
+    font-style: italic;
 }
 
 .logo
@@ -118,7 +119,8 @@ nav a:hover {
     text-decoration-color: #000;
     background-color:peachpuff;
     color:#000;
-    font-size: 25px;
+    font-size: 22px; 
+    font-style:italic;
   }
   
   .dropdown-content {
