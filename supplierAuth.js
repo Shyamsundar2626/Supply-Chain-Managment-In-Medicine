@@ -12,6 +12,7 @@ signupForm.addEventListener('submit',(e) => {
         console.log(cred.user); 
         window.alert("Account Created Sucessfully!!");
         const modal = document.querySelector('#sign-up'); 
+        window.location.href="supplierReg.html";
 
     }) 
     .catch((error) => {
@@ -38,6 +39,7 @@ signinForm.addEventListener('submit',(e) => {
         console.log(cred.user); 
         window.alert("Logged In successfully!!");
         const modal = document.querySelector('#sign-in');  
+        window.location.href="index.html";
     })
     .catch((error) => {
         var errorCode = error.code; 
