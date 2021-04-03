@@ -13,45 +13,46 @@
      Supplier Registration Form
     </div>
     <form id="supplierform">
+       <div class="inputs">
        <div class="inputfield">
           <label>First Name:</label>
-          <input id="fname" type="text" class="input">
+          <input id="fname" type="text" class="input" required>
        </div>  
         <div class="inputfield">
           <label>Last Name:</label>
-          <input id="lname" type="text" class="input">
+          <input id="lname" type="text" class="input" required>
        </div>  
         <div class="inputfield">
           <label>Email Address:</label>
-          <input id="emailid" type="text" class="input">
+          <input id="emailid" type="text" class="input" required>
        </div> 
        <div class="inputfield">
         <label>Manufacturer name:</label>
-        <input id="mname" type="text" class="input">
+        <input id="mname" type="text" class="input" required>
      </div> 
       <div class="inputfield">
           <label>Address:</label>
-          <textarea id="address" class="textarea"></textarea>
+          <textarea id="address" class="textarea" required></textarea>
        </div> 
       <div class="inputfield">
           <label>Postal Code:</label>
-          <input id="postalcode" type="text" class="input">
+          <input id="postalcode" type="text" class="input" required>
        </div> 
        <div class="inputfield">
         <label>No. of medicines supplied in a year:</label>
-        <input id="medno" type="text" class="input">
+        <input id="medno" type="text" class="input" required>
      </div> 
        <div class="inputfield">
         <label>Phone Number:</label>
-        <input id="phno" type="text" class="input">
+        <input id="phno" type="text" class="input" required>
      </div> 
      <div class="inputfield">
         <label>Government approved License:</label>
-        <input id="govlic" type="file" name="f">
+        <input id="govlic" type="file" name="f" required>
      </div> 
       <div class="inputfield terms">
           <label class="check">
-            <input type="checkbox">
+            <input type="checkbox" required>
             <span class="checkmark"></span>
           </label>
           <p>Agreed to terms and conditions</p>
@@ -59,6 +60,7 @@
       <div class="inputfield">
         <input type="submit" value="Register" class="btn">
       </div>
+   </div>
    </form>
 </div>	
 
