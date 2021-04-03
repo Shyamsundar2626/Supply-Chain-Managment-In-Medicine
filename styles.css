@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  font-family: cursive;
 }
 body{
   background: blue;
@@ -52,7 +53,7 @@ body{
   border: 1px solid #d5dbd9;
   font-size: 15px;
   padding: 8px 10px;
-  border-radius: 3px;
+  border-radius: 3pxpx;
   transition: all 0.3s ease;
 }
 
@@ -73,7 +74,8 @@ body{
   position: absolute;
   top: 12px;
   right: 10px;
-  border: 8px solid;
+  border: 8px solid; 
+  border-radius: 3px;
   border-color: #d5dbd9 transparent transparent transparent;
   pointer-events: none;
 }
@@ -89,7 +91,7 @@ body{
   padding: 8px 10px;
   font-size: 15px;
   border: 1px solid #d5dbd9;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 
@@ -131,6 +133,7 @@ body{
   width: 5px;
   height: 2px;
   border: 2px solid;
+  border-radius: 3px;
   border-color: transparent transparent #fff #fff;
   transform: rotate(-45deg);
   display: none;
@@ -151,7 +154,7 @@ body{
   background: blue;
   color: #fff;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 20px;
   outline: none;
 }
 
