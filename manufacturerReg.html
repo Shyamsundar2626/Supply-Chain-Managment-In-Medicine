@@ -12,43 +12,43 @@
     <div class="title">
      Manufacturer Registration Form
     </div>
-    <form id="form">
+    <form id="manufacturerform" action="">
        <div class="inputs">
        <div class="inputfield">
           <label>First Name:</label>
-          <input type="text" class="input" required>
+          <input id="fname" type="text" class="input" required>
        </div>  
         <div class="inputfield">
           <label>Last Name:</label>
-          <input type="text" class="input" required>
+          <input id="lname" type="text" class="input" required>
        </div>  
         <div class="inputfield">
           <label>Email Address:</label>
-          <input type="text" class="input" required>
+          <input id="emailid" type="text" class="input" required>
        </div> 
        <div class="inputfield">
         <label>Company Name:</label>
-        <input type="text" class="input" required>
+        <input id="cname" type="text" class="input" required>
      </div> 
       <div class="inputfield">
           <label>Company Address:</label>
-          <textarea class="textarea" required></textarea>
+          <textarea id="caddress" class="textarea" required></textarea>
        </div> 
       <div class="inputfield">
           <label>Postal Code:</label>
-          <input type="text" class="input" required>
+          <input id="postalcode" type="text" class="input" required>
        </div> 
        <div class="inputfield">
         <label>No. of medicines manufactured in a year:</label>
-        <input type="text" class="input" required>
+        <input id="medno" type="text" class="input" required>
      </div> 
        <div class="inputfield">
         <label>Phone Number:</label>
-        <input type="text" class="input" required>
+        <input id="phno" type="text" class="input" required>
      </div> 
      <div class="inputfield">
         <label>Government License:</label>
-        <input type="file" name="f" required>
+        <input id="govlic" type="file" name="f" required>
      </div> 
       <div class="inputfield terms">
           <label class="check">
@@ -59,11 +59,14 @@
           <p>Agreed to terms and conditions</p>
        </div> 
       <button type="submit">Register</button>
-      <p id="log"></p>
    </div>
     </form>
-</div>
-	<script src="manufacturerRegAuth.js"></script>
+</div> 
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+<script src="manufacturerRegAuth.js"></script>
 
 </body>
 </html>
