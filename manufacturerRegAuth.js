@@ -36,6 +36,7 @@ saveMessage(fname, lname,emailid, cname, caddress, postalcode, medno, phno, govl
 
 //Alert Message
 window.alert('Your messages has been sent!');
+window.location.href="ManufacturerMail.html";
 
 // Clear form
 document.getElementById('manufacturerform').reset();
