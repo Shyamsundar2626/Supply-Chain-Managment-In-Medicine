@@ -23,13 +23,12 @@ function submitForm(e){
 //Get Values
 var fname = getInputVal('fname');
 var lname = getInputVal('lname');
-var contactno = getTnputVal('contactno');
-var emailid = getTnputVal('emailid');
-var country = getInputVal('country');
+var contactno = getInputVal('contactno');
+var emailid = getInputVal('emailid');
 var Feedback = getInputVal('Feedback');    
 
 //Save Message 
-saveMessage(fname, lname, contactno, emailid, country, Feedback); 
+saveMessage(fname, lname, contactno, emailid, Feedback); 
 
 //Alert Message
 window.alert('Your messages has been sent!');
@@ -44,14 +43,13 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(fname, lname, country, Feedback){
+function saveMessage(fname, lname, contactno, emailid, Feedback){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       fname: fname ,
       lname: lname,
       contactno: contactno,
       emailid: emailid,
-      country: country,
       Feedback: Feedback
     });
   }

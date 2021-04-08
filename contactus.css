@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap');
+
+* {
+    font-family: cursive;
+    line-height: 30px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    font-family: cursive;
+}
+
+.container {
+    background: #ffffff;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    margin-top: 60px;
+    margin-left: 50px;
+    box-shadow: -10px 20px 50px blue;
+}
+
+.contact-info {
+    padding: 20px;
+    background: blue;
+    width: 250px;
+    height: 350px;
+    color: #ffffff;
+    margin-top: 50px;
+    margin-left: -100px;
+    border-radius: 3px;
+}
+
+span {
+    color: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+i {
+    width: 45px;
+    cursor: pointer;
+    color: black;
+    font-size: 15px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff;
+    margin-top: 10px;
+}
+
+.social {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#social-icon {
+    font-size: 25px;
+    color: #ffffff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#social-icon:hover {
+    color: blue;
+}
+
+.contact {
+    padding: 20px;
+    width: 600px;
+    height: 350px;
+}
+
+.heading {
+    font-size: 45px;
+    color: blue;
+    margin-bottom: 50px;
+}
+
+.inputname {
+    color: black;
+    pointer-events: none;
+    margin-top: 0px;
+    padding: 0;
+}
+
+.inputbox {
+    width: 255px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.inputname {
+    position: relative;
+    top: -30px;
+    left: 0;
+    transition: 0.25s ease-in-out;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+textarea {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    resize: none;
+}
+
+.textname {
+    color: black;
+    pointer-events: none;
+    margin-top: 0px;
+    padding: 0;
+    position: relative;
+    top: -100px;
+    left: 0;
+    transition: 0.25s ease-in-out;
+}
+
+.container .contact .inputbox input:focus~span,
+.container .contact .inputbox input:valid~span {
+    position: relative;
+    top: -60px;
+    font-size: 10px;
+    color: blue;
+}
+
+.container .contact .inputbox textarea:focus~span,
+.container .contact .inputbox textarea:valid~span {
+    position: relative;
+    top: -130px;
+    font-size: 10px;
+    color:blue;
+}
+
+.submit {
+    background: black;
+    color: blue;
+    border-radius: 2px;
+    font-weight: 600;
+}

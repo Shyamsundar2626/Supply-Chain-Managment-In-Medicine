@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="contactus.css" />
+    <title>contact us</title>
+</head>
+
+<body> 
+    <a name="contactus"></a>
+    <section class="section section-dark">	
+    <div class="container">
+        <div class="contact-info">
+            <h1>Contact Info</h1>
+            <i class="material-icons">place</i>
+            <span>2772 XYZ Lane<br />PQRS,12345</span><br />
+            <i class="material-icons">email</i>
+            <span>noreplyfakequipo@gmail.com</span><br />
+            <i class="material-icons">phone</i>
+            <span>984-10x-xxxx</span>
+            <div class="social">
+                <i id="social-icon" class="fa fa-facebook-official"></i>
+                <i id="social-icon" class="fa fa-inbox"></i>
+                <i id="social-icon" class="fa fa-phone"></i>
+                <i id="social-icon" class="fa fa-youtube-play"></i>
+            </div>
+        </div>
+        <div class="contact">
+            <h1 class="heading">Connect with us..</h1>
+            <form id="contactForm" action="">
+                <span class="inputbox">
+                    <input id="fname" type="text" required />
+                    <span class="inputname">First Name</span>
+                </span>
+                <span class="inputbox">
+                    <input id="lname" type="text" required />
+                    <span class="inputname">Last Name</span>
+                </span>
+                <span class="inputbox">
+                    <input id="contactno" type="text" required/>
+                    <span class="inputname">Contact No</span>
+                </span>
+                <span class="inputbox">
+                    <input id="emailid" type="text" required />
+                    <span class="inputname">Email Address</span>
+                </span> 
+                <span class="inputbox">
+                    <textarea id="Feedback" name="" id="" cols="30" rows="3" required></textarea>
+                    <span class="textname">Write your message here</span> </span><br />
+                <input type="submit" class="Submit" />
+            </form>
+        </div>
+    </div> 
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+    <script src="contactForm.js"></script>
+</body>
+
+</html>
