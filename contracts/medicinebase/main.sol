@@ -82,7 +82,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
   }
 
   // Define a function 'makeMedicine' that allows a manufacturer to mark a medicine 'Made'
-  function makeMedicine(string memory _batchno, string memory _medicineName, address  _originManufacturerID, string memory _FactoryName, string memory _mfgdate,string memory _expdate,address _distributorID,address _userID) public
+  function makeMedicine(string memory _batchno, string memory _medicineName, address  _originManufacturerID,address _ownerID, string memory _FactoryName, string memory _mfgdate,string memory _expdate,State,address _distributorID,address _userID) public
   
   //onlymanufacturer
 
@@ -91,8 +91,8 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     Medicine memory makeMedicine = Medicine({
       batchno:_batchno,  
       medicineName:_medicineName,
-      ownerID:_originManufacturerID,  // Metamask-Ethereum address of the current owner as the medicine moves through 3 stages
-      originManufacturerID:_originManufacturerID, // Metamask-Ethereum address of the Manufacturer
+      originManufacturerID:_originManufacturerID,// Metamask-Ethereum address of the Manufacturer
+      ownerID:_ownerID, // Metamask-Ethereum address of the current owner as the medicine moves through 3 stages
       FactoryName:_FactoryName, // Manufacturer Name
       mfgdate:_mfgdate,//mfgdate
       expdate:_expdate,//expdate
@@ -148,9 +148,10 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     string memory  medicineName, //Medicine name
     address ownerID,  // Metamask-Ethereum address of the current owner as the medicine moves through 3 stages
     address originManufacturerID, // Metamask-Ethereum address of the Manufacturer
-    string memory FactoryName, // Manufacturer Name
-    string memory mfgdate,//mfgdate
-    string memory expdate // expdate
+    //string memory FactoryName, // Manufacturer Name
+    //string memory mfgdate,//mfgdate
+    //string memory expdate, // expdate
+    State medicineState
     ) 
   {
   // Assign values to the 7 parameters
@@ -162,9 +163,42 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     medicines[_batchno].medicineName,
     medicines[_batchno].ownerID,
     medicines[_batchno].originManufacturerID,
+    //medicines[_batchno].FactoryName,
+    //medicines[_batchno].mfgdate,
+    //medicines[_batchno].expdate,
+    medicines[_batchno].medicineState
+    // medicines[_batchno].
+    );
+}
+function fetchMedicineBufferTwo(string memory _batchno) public view returns 
+  (
+    string memory batchno,  //the primary key batchno 
+    //string memory  medicineName, //Medicine name
+    //address ownerID,  // Metamask-Ethereum address of the current owner as the medicine moves through 3 stages
+    //address originManufacturerID, // Metamask-Ethereum address of the Manufacturer
+    string memory FactoryName, // Manufacturer Name
+    string memory mfgdate,//mfgdate
+    string memory expdate, // expdate
+    //State medicineState,
+    address distributorID,
+    address userID
+    ) 
+  {
+  // Assign values to the 7 parameters
+  
+
+  return 
+  (
+    medicines[_batchno].batchno,
+    //medicines[_batchno].medicineName,
+    //medicines[_batchno].ownerID,
+    //medicines[_batchno].originManufacturerID,
     medicines[_batchno].FactoryName,
     medicines[_batchno].mfgdate,
-    medicines[_batchno].expdate
+    medicines[_batchno].expdate,
+    //medicines[_batchno].medicineState,
+    medicines[_batchno].distributorID,
+    medicines[_batchno].userID
     // medicines[_batchno].
     );
 }

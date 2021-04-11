@@ -2,7 +2,7 @@ pragma solidity ^0.5.16;
 
 // Import the library 'Roles'
 import "./Roles.sol";
-import "openzeppelin-solidity/contracts/access/Roles.sol";
+//import "openzeppelin-solidity/contracts/access/Roles.sol";
 
 // Define a contract 'UserRole' to manage this role - add, remove, check
 contract UserRole {
