@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="imgupload.css">
 
-	<title>File Upload</title>
+	<title>File Upload PHP Script - Pure Coding</title>
 </head>
 <body>
 	<div class="file__upload">
@@ -16,17 +16,23 @@
 			<p><i class="fa fa-cloud-upload fa-2x"></i><span><span>up</span>load</span></p>			
 		</div>
 		<form action="" method="POST" enctype="multipart/form-data" class="body">
-			<input type="file" value="upload" name="file" id="fileButton" required>
+			
+			<input type="file" name="file" id="upload" required>
 			<label for="upload">
 				<i class="fa fa-file-text-o fa-3x"></i>
 				<p>
-					<strong>Drag and drop</strong> image here<br>
+					<strong>Drag and drop</strong> files here<br>
 					or <span>browse</span> to begin the upload
 				</p>
 			</label>
-			<button name="upload" class="btn">Upload</button>
-        </form>
-		
-	</div> 
+			<button name="upload" onclick="window.location='download.html'" class="btn">Upload</button>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function upload(){
+			window.alert("Upload Successfull");
+			window.location.href="download.html";
+		}
+	</script>
 </body>
 </html>
