@@ -8,7 +8,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke; 
+    background: linear-gradient(#7ee8fa, #eec0c6); 
 }
 .about{
     background: url(img1.jpg) no-repeat left;
