@@ -34,6 +34,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
   struct Medicine {
     string  batchno;  //the primary key batchno 
     string  medicineName; //Medicine name
+    string dosage;//dosage
     address ownerID;  // Metamask-Ethereum address of the current owner as the medicine moves through 3 stages
     address originManufacturerID; // Metamask-Ethereum address of the Manufacturer
     string  FactoryName; // Manufacturer Name
@@ -82,7 +83,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
   }
 
   // Define a function 'makeMedicine' that allows a manufacturer to mark a medicine 'Made'
-  function makeMedicine(string memory _batchno, string memory _medicineName, address  _originManufacturerID,address _ownerID, string memory _FactoryName, string memory _mfgdate,string memory _expdate,State,address _distributorID,address _userID) public
+  function makeMedicine(string memory _batchno, string memory _medicineName,string memory _dosage, address  _originManufacturerID,address _ownerID, string memory _FactoryName, string memory _mfgdate,string memory _expdate,State,address _distributorID,address _userID) public
   
   //onlymanufacturer
 
@@ -91,6 +92,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     Medicine memory makeMedicine = Medicine({
       batchno:_batchno,  
       medicineName:_medicineName,
+      dosage:_dosage,
       originManufacturerID:_originManufacturerID,// Metamask-Ethereum address of the Manufacturer
       ownerID:_ownerID, // Metamask-Ethereum address of the current owner as the medicine moves through 3 stages
       FactoryName:_FactoryName, // Manufacturer Name
@@ -148,6 +150,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     string memory  medicineName, //Medicine name
     address ownerID,  // Metamask-Ethereum address of the current owner as the medicine moves through 3 stages
     address originManufacturerID, // Metamask-Ethereum address of the Manufacturer
+    string memory dosage,
     //string memory FactoryName, // Manufacturer Name
     //string memory mfgdate,//mfgdate
     //string memory expdate, // expdate
@@ -163,7 +166,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     medicines[_batchno].medicineName,
     medicines[_batchno].ownerID,
     medicines[_batchno].originManufacturerID,
-    //medicines[_batchno].FactoryName,
+    medicines[_batchno].dosage,
     //medicines[_batchno].mfgdate,
     //medicines[_batchno].expdate,
     medicines[_batchno].medicineState
