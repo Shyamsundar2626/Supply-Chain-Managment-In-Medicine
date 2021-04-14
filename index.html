@@ -10,34 +10,71 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/index-contents.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-    <link rel="icon" href="logo8.jpg" type="image/x-icon">
+    <link rel="icon" href="logo8.jpg" type="image/x-icon">  
+    <style type="text/css">
+      body{
+       font-family: cursive;
+       margin: 10px 30px; 
+      }
+      #mainbox{
+       font-size: 28px; 
+       color:antiquewhite;
+       background:linear-gradient(#6d17cb , #2876f9);
+       cursor: pointer;
+       transition: all .6s; 
+       width: 34px; 
+       border-radius: 3px;
+      }
+      .sidemenu{
+       position: fixed;
+       top: 00px;
+       left: 0px;
+       height: 100%;
+       width: 0px; 
+       background: linear-gradient(transparent,  #00a4e4  , #aee1f9);
+       z-index: 1;
+       padding-top: 80px; 
+       overflow-x: hidden;
+       transition: all .5s;
+      }
+      .sidemenu a{
+       padding: 30px 30px 30px 55px;
+       text-decoration: none;
+       font-size: 22px;
+       color: black;
+       display: block; 
+       margin-right: -10px;
+      }
+      .sidemenu a:hover{
+        color: black;  
+        text-decoration: underline; 
+      } 
+      .sidemenu .closebtn{
+         position: absolute;
+         top: 0px;
+         right: 25px;
+         font-size: 55px; 
+         font-weight: 1000px; 
+         text-decoration: none; 
+         color:black;  
+         font-family: 'Courier New', Courier, monospace;
+         margin-left: 32px;
+      } 
+      .sidemenu .closebtn:hover{
+        text-decoration: none; 
+
+      }
+    </style>  
 </head>
 <body>
-    <!-- Navigaton bar -->
-    <header id="topnav">
-        <div class="inner">
-          <div class="logo">
-            <img src="logo8.jpg" alt="">
-          </div>
-            <nav role='navigation'>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn">Register/SignIn
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                      <a href="consumerSignin.html">Consumer</a>
-                      <a href="supplierSignin.html">Supplier</a>
-                      <a href="manufacturerSignin.html">Manufacturer</a>
-                    </div>
-                </div> 
-                <li><a href="about.html">About</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-              </ul>
-            </nav>
-        </div>
-      </header>
+  <div id="mainbox" onclick="openFunction()">&#9776; </div>
+  <div id="menu" class="sidemenu">
+   <a href="index.html">Home</a> 
+   <a href="signinregister.html">SignIn/Register</a>
+   <a href="about.html">About Us</a>
+   <a href="contactus.html">Contact Us</a>
+   <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+ </div>
       <div class="pimg1" style = "background-image: url('frontpage.png'); background-size: 1583px 605px; margin-bottom: 0px; opacity: 0.9;">
         <div class="welcome-text">
             <h1 data-text="Fake">Fake<span data-text="Quipo">Quipo</span></h1>
@@ -107,6 +144,18 @@
 
 <script src="contactForm.js"></script> -->
 <script type="text/javascript" src="js/chatbot.js"></script>
+<script type="text/javascript">
+  function openFunction(){
+   document.getElementById("menu").style.width="300px";
+   document.getElementById("mainbox").style.marginLeft="300px";
+   document.getElementById("mainbox");
+  }
+ function closeFunction(){
+  document.getElementById("menu").style.width="0px";
+  document.getElementById("mainbox").style.marginLeft="0px";
+  document.getElementById("mainbox").innerHTML="&#9776;";
+ }
+</script>
 
 </body>
 </html>
