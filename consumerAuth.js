@@ -12,7 +12,7 @@ signupForm.addEventListener('submit',(e) => {
         console.log(cred.user); 
         window.alert("Account Created Sucessfully!!");
         const modal = document.querySelector('#sign-up'); 
-        window.location.href="window-index.html";
+        window.location.href="imgupload.html";
 
     }) 
     .catch((error) => {

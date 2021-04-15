@@ -35,7 +35,8 @@ var govlic = getInputVal('govlic');
 saveMessage(fname, lname,emailid, mname, address, postalcode, medno, phno, govlic); 
 
 //Alert Message
-window.alert('Your messages has been sent!');
+window.alert('Your messages has been sent!'); 
+window.location.href="imgupload.html";
 
 // Clear form
 document.getElementById('supplierform').reset();
