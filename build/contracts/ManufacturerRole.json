@@ -2769,14 +2769,41 @@
   },
   "networks": {
     "5777": {
-      "events": {},
+      "events": {
+        "0x561138658ca49a8540dc70dcfe64c9026c1c5b9344642242dd6562970f9c1278": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ManufacturerAdded",
+          "type": "event"
+        },
+        "0x2fed5abf6a80d6dfe30b4895481b2fc5d7dce5f8f7b931832f4a2947d5040c7f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ManufacturerRemoved",
+          "type": "event"
+        }
+      },
       "links": {},
-      "address": "0xb3347fEF8061F63191d6881f1e4537d23C0B3bc0",
-      "transactionHash": "0x9ffb888084c0f777699a8a6048860a10586abaac0e5d74aa080dba110c7907a4"
+      "address": "0x1f3DA8Be3A833c694040eD96dfc09B97D01EAf13",
+      "transactionHash": "0xdaebaadddd95d63527fc2636173a3fa74442a0fdce4bc8e06043db7e9058326e"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-11T09:43:53.879Z",
+  "updatedAt": "2021-04-15T17:31:44.420Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

@@ -9066,133 +9066,14 @@
   },
   "networks": {
     "5777": {
-      "events": {
-        "0xddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea8": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "DistributorAdded",
-          "type": "event"
-        },
-        "0x126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d59": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "DistributorRemoved",
-          "type": "event"
-        },
-        "0x1799535f7a29ce07cbb39c3b734f6f1164b1fd38f7f91d0a1253840c7f1e8c44": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "string",
-              "name": "batchno",
-              "type": "string"
-            }
-          ],
-          "name": "Made",
-          "type": "event"
-        },
-        "0x561138658ca49a8540dc70dcfe64c9026c1c5b9344642242dd6562970f9c1278": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "ManufacturerAdded",
-          "type": "event"
-        },
-        "0x2fed5abf6a80d6dfe30b4895481b2fc5d7dce5f8f7b931832f4a2947d5040c7f": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "ManufacturerRemoved",
-          "type": "event"
-        },
-        "0x3ea707e6edd0cf74fca91798b1efc0fd5dbf0627e3ce3f8d016c7d2d9d4107f6": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "string",
-              "name": "batchno",
-              "type": "string"
-            }
-          ],
-          "name": "Packed",
-          "type": "event"
-        },
-        "0xe849b0af4ecf208b975210b68de7f7e7a16da0804e997c5586fd91397ea96f5a": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "string",
-              "name": "batchno",
-              "type": "string"
-            }
-          ],
-          "name": "Sold",
-          "type": "event"
-        },
-        "0x19ef9a4877199f89440a26acb26895ec02ed86f2df1aeaa90dc18041b892f71f": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "UserAdded",
-          "type": "event"
-        },
-        "0xe9dce8c992623ce791725b21e857e33248d1f190a25b5168313420eebdaae99d": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "UserRemoved",
-          "type": "event"
-        }
-      },
+      "events": {},
       "links": {},
-      "address": "0x6d2837615f5B2F8629e2092b234DEBfB10CdFacc",
-      "transactionHash": "0x028ad70e133393879582d9c43946c8e5e28a348de8824e9c38ab0fc7d320fe7f"
+      "address": "0x9dCd3fc97A065546575DF982ABa0eb4bC7A9a122",
+      "transactionHash": "0xe1d0aabd1c297e0fc094f3afb6ee37be6b4c0478f71484377bc9f9876e7c5ec4"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-15T17:31:44.616Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-04-13T08:20:35.927Z",
   "devdoc": {
     "methods": {}
   },
