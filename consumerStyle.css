@@ -4,14 +4,15 @@
 	box-sizing: border-box;
 }
 
-body {
-	background: #f6f5f7;
+body { 
+	background: url(signin4.jpg) no-repeat center; 
+	background-size: 1620px 750px; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: column; 
 	font-family: cursive;
-	height: 100vh;
+	height: 90vh;
 	margin: -20px 0 50px;
 }
 
@@ -25,7 +26,7 @@ h2 {
 }
 
 p {
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 100;
 	line-height: 20px;
 	letter-spacing: 0.5px;
@@ -33,12 +34,12 @@ p {
 }
 
 span {
-	font-size: 12px;
+	font-size: 16px;
 }
 
 a {
 	color: #333;
-	font-size: 14px;
+	font-size: 16px;
 	text-decoration: none;
 	margin: 15px 0;
 }
@@ -46,9 +47,9 @@ a {
 button {
 	border-radius: 20px;
 	border: 1px solid blue;
-	background-color: blue;
+	background:linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 14px; 
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
@@ -65,12 +66,12 @@ button:focus {
 }
 
 button.ghost {
-	background-color: transparent;
+	background: transparent;
 	border-color: #FFFFFF;
 }
 
 form {
-	background-color: #FFFFFF;
+	background-color:linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -160,8 +161,8 @@ input {
 
 .overlay {
 	background:blue;
-	background: -webkit-linear-gradient(to right,blue,blue);
-	background: linear-gradient(to right, blue, blue);
+	background: -webkit-linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+	background: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -215,7 +216,7 @@ input {
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
+	border: 1px solid #5a5a5a;
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
