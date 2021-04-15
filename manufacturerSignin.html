@@ -4,9 +4,11 @@
 	<title>SignUp and Login</title>
 	<link rel="stylesheet" type="text/css" href="manufacturerStyle.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="navbar.css">
 </head>
 <body>
 
+	
 <div class="container" id="container">
 <div id="sign-up" class="form-container sign-up-container">
 
@@ -95,6 +97,17 @@
 
 <script src="manufacturerAuth.js"></script>
 
-
+<script type="text/javascript">
+	function openFunction(){
+	 document.getElementById("menu").style.width="300px";
+	 document.getElementById("mainbox").style.marginLeft="300px";
+	 document.getElementById("mainbox");
+	}
+   function closeFunction(){
+	document.getElementById("menu").style.width="0px";
+	document.getElementById("mainbox").style.marginLeft="0px";
+	document.getElementById("mainbox").innerHTML="&#9776;";
+   }
+  </script>
 </body>
 </html>

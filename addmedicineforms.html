@@ -1,48 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Add medicine Forms</title>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add medicine Forms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
+
 <body>
 
-<div class="wrapper">
-    <div class="title">
-        Add medicine Forms
+    <div class="header">
+        <div id="mainbox" onclick="openFunction()">&#9776; </div>
+        <div id="menu" class="sidemenu">
+            <a href="index.html">Home</a>
+            <a href="signinregister.html">SignIn/Register</a>
+            <a href="about.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+            <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+        </div>
     </div>
-    <form id="manufacturerform" action="" method="GET">
-       <div class="inputs">
-       <div class="inputfield">
-          <label>Company Name:</label>
-          <input id="company name" type="text" class="input" required>
-       </div>  
-        <div class="inputfield">
-          <label>Medicine Name:</label>
-          <input id="medicine name" type="text" class="input" required>
-       </div>  
-        <div class="inputfield">
-          <label>Dosage:</label>
-          <input id="dosage" type="text" class="input" required>
-       </div> 
-       <div class="inputfield">
-        <label>Batch No:</label>
-        <input id="batch no" type="text" class="input" required>
-     </div> 
-      <div class="inputfield">
-          <label>Manufaturing date:</label>
-          <input id="mfg date" type="text" class="input" required>
-       </div> 
-      <div class="inputfield">
-          <label>Expiry Date:</label>
-          <input id="exp date" type="text" class="input" required>
-       </div> 
-      <button type="submit">Run</button>
-   </div>
-    </form>
-</div> 
-
-
+    <div class="wrapper">
+        <div class="title">
+            Add medicine Forms
+        </div>
+        <form id="manufacturerform" action="" method="GET">
+            <div class="inputs">
+                <div class="inputfield">
+                    <label>batchno:</label>
+                    <input id="company name" type="text" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label>medicineName:</label>
+                    <input id="medicine name" type="text" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label>dosage:</label>
+                    <input id="dosage" type="text" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label>FactoryName:</label>
+                    <input id="batch no" type="text" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label>mfgdate:</label>
+                    <input id="mfg date" type="text" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label>expdate:</label>
+                    <input id="exp date" type="text" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label>metamask id:</label>
+                    <input id="metamask id" type="text" class="input" required>
+                </div>
+                <input class="button" type="button" value="Submit" onclick="App.readForm();">
+            </div>
+        </form>
+    </div>
+    <script>
+        function success() {
+            window.alert("Successful");
+            window.location.href = "download.html";
+        }
+    </script>
 </body>
+
+<script type="text/javascript">
+    function openFunction() {
+        document.getElementById("menu").style.width = "300px";
+        document.getElementById("mainbox").style.marginLeft = "300px";
+        document.getElementById("mainbox");
+    }
+
+    function closeFunction() {
+        document.getElementById("menu").style.width = "0px";
+        document.getElementById("mainbox").style.marginLeft = "0px";
+        document.getElementById("mainbox").innerHTML = "&#9776;";
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+</body>
+
 </html>
