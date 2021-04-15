@@ -243,8 +243,8 @@ App = {
     }
 };
 
-(function() {
-    (window).load(function() {
+$(function() {
+    $(window).load(function() {
         App.init();
     });
 });
