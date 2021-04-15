@@ -12,17 +12,23 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
     <link rel="icon" href="logo8.jpg" type="image/x-icon">  
     <style type="text/css">
-      body{
+      .header{
        font-family: cursive;
-       margin: 10px 30px; 
+       padding-top: 20px;
+       padding-left: 20px;
+      }
+      .logo{
+        float:right;
+        padding-top: 30px;
       }
       #mainbox{
-       font-size: 28px; 
+       font-size: 30px; 
        color:antiquewhite;
        background:linear-gradient(#6d17cb , #2876f9);
        cursor: pointer;
        transition: all .6s; 
-       width: 34px; 
+       width: 40px; 
+       
        border-radius: 3px;
       }
       .sidemenu{
@@ -67,20 +73,27 @@
     </style>  
 </head>
 <body>
-  <div id="mainbox" onclick="openFunction()">&#9776; </div>
-  <div id="menu" class="sidemenu">
-   <a href="index.html">Home</a> 
-   <a href="signinregister.html">SignIn/Register</a>
-   <a href="about.html">About Us</a>
-   <a href="contactus.html">Contact Us</a>
-   <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
- </div>
-      <div class="pimg1" style = "background-image: url('frontpage.png'); background-size: 1583px 605px; margin-bottom: 0px; opacity: 0.9;">
+  <div class="logo">
+    <img src="main_logo.jpeg" width="20%" height="20%" alt="">
+  </div>
+  
+      <div class="pimg1" style = "background-image: url('frontpage.png'); background-size: 1583px 605px; margin-bottom: 0px; opacity: 0.9; height:100vh;background-position: center;background-repeat: no-repeat;background-size: cover;  background-attachment: fixed;">
+        <div class="header">
+          <div id="mainbox" onclick="openFunction()">&#9776; </div>
+          <div id="menu" class="sidemenu">
+           <a href="index.html">Home</a> 
+           <a href="signinregister.html">SignIn/Register</a>
+           <a href="about.html">About Us</a>
+           <a href="contactus.html">Contact Us</a>
+           <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+         </div>
+         </div>
         <div class="welcome-text">
             <h1 data-text="Fake">Fake<span data-text="Quipo">Quipo</span></h1>
             <h2>Save yourself from being counterfeited</h2>
         </div>
       </div>
+      
       <!-- About Section 
       <a name="about"></a>
     <section class="section section-light">		

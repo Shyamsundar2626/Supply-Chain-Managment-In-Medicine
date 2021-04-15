@@ -5,9 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Add medicine Forms</title>
 	<link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-
+          <div class="header">
+            <div id="mainbox" onclick="openFunction()">&#9776; </div>
+            <div id="menu" class="sidemenu">
+             <a href="index.html">Home</a> 
+             <a href="signinregister.html">SignIn/Register</a>
+             <a href="about.html">About Us</a>
+             <a href="contactus.html">Contact Us</a>
+             <a href="index.html">Logout</a>
+             <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+           </div>
+           </div>
 <div class="wrapper">
     <div class="title">
         Add medicine Forms
@@ -38,11 +49,28 @@
           <label>Expiry Date:</label>
           <input id="exp date" type="text" class="input" required>
        </div> 
-      <button type="submit">Run</button>
+      <button onclick="success()" type="submit">Run</button>
    </div>
     </form>
 </div> 
+<script>
+   function success(){
+      window.alert("Successful");
+      window.location.href="download.html";
+   }
+</script>
 
-
+<script type="text/javascript">
+  function openFunction(){
+   document.getElementById("menu").style.width="300px";
+   document.getElementById("mainbox").style.marginLeft="300px";
+   document.getElementById("mainbox");
+  }
+ function closeFunction(){
+  document.getElementById("menu").style.width="0px";
+  document.getElementById("mainbox").style.marginLeft="0px";
+  document.getElementById("mainbox").innerHTML="&#9776;";
+ }
+</script>
 </body>
 </html>

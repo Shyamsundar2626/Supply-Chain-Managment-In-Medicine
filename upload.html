@@ -7,16 +7,17 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" type="text/css" href="upload.css">
-
+	<link rel="stylesheet" href="navbar.css">
 	<title>File Upload</title>
 </head>
 <body>
+	
 	<div class="file__upload">
 		<div class="header">
 			<p><i class="fa fa-cloud-upload fa-2x"></i><span><span>up</span>load</span></p>			
 		</div>
 		<form action="" method="POST" enctype="multipart/form-data" class="body">
-			<input type="file" value="upload" name="file" id="fileButton" required>
+			<input type="file" name="file" id="upload" required>
 			<label for="upload">
 				<i class="fa fa-file-text-o fa-3x"></i>
 				<p>
@@ -24,7 +25,7 @@
 					or <span>browse</span> to begin the upload
 				</p>
 			</label>
-			<button name="upload" class="btn">Upload</button>
+			<button name="upload" onclick="success();" class="btn">Upload</button>
         </form>
 		
 	</div> 
@@ -33,6 +34,11 @@
 <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
 <script>
   // Your web app's Firebase configuration
+  function success(){
+	
+	window.alert("Successful");
+	window.location.href="addmedicineforms.html";
+  
   var firebaseConfig = {
     apiKey: "AIzaSyDQ1ALjcdGt63Lod6QFE2dNL91wf9N0BU4",
     authDomain: "upload-doc-bcd9c.firebaseapp.com",
@@ -61,9 +67,23 @@
 
   });
   
-  	window.alert('Your doc has been uploaded successfully!');
-	window.location.href="addmedicineforms.html";
+  
+  }
+	
 
-</script>	    
+</script>	  
+<script type="text/javascript" src="js/chatbot.js"></script>
+<script type="text/javascript">
+  function openFunction(){
+   document.getElementById("menu").style.width="300px";
+   document.getElementById("mainbox").style.marginLeft="300px";
+   document.getElementById("mainbox");
+  }
+ function closeFunction(){
+  document.getElementById("menu").style.width="0px";
+  document.getElementById("mainbox").style.marginLeft="0px";
+  document.getElementById("mainbox").innerHTML="&#9776;";
+ }
+</script>  
 </body>
 </html>
