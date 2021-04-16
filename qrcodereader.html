@@ -8,8 +8,21 @@
 </head>
 <body>
     <input type="file" name="file" id="file">
+    <button onclick="val();">Submit</button>
     <p>Qr Content:<span id="content"></span></p>
     <!--To Read QR code -->
 	<script type="text/javascript" src="qrReader.js"></script>
+   
+    <input type="text" id="scan" placeholder="Code">
+    <button onclick="val();">Submit</button>
+    <script>
+        function val(){
+        var item=document.getElementById("content").innerText;
+        document.getElementById("scan").value=item;
+    }
+        
+</script>
 </body>
 </html>
+
+

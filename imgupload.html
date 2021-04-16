@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="imgupload.css">
 
 	<title>File Upload PHP Script - Pure Coding</title>
+	
 </head>
 <body>
 	<div class="file__upload">
@@ -26,11 +27,20 @@
 					or <span>browse</span> to begin the upload
 				</p>
 			</label> 
-			<a href="scanqrcode.html">
-			<button name="upload"  class="btn">Upload</button> 
-			</a>
+				<!--To Read QR code -->
+				<script type="text/javascript" src="qrReader.js"></script>
+				
+			<button name="upload" onclick="val();" class="btn">Upload</button> 
+			<p><span id="content"></span></p>
+			<input type="text" id="scan">
 		</form>
 	</div>
-
+	<script>
+        function val(){
+        var item=document.getElementById("content").innerText;
+        window.alert(item);
+        document.getElementById("scan").value=item;}
+        
+</script>
 </body>
 </html>
