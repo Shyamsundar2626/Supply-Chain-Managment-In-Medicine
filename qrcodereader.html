@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="qrcodereader.css">
     <title>Document</title>
 </head>
-<body>
+<body> 
+    <div id="box">
     <input class="file__upload" type="file" name="file" id="file" required>
     <button class="btn" onclick="val();">submit</button>
     <p>Qr Content:<span id="content"></span></p>
@@ -15,7 +16,11 @@
 	<script type="text/javascript" src="qrReader.js"></script>
    
     <input class="qrcode" type="text" id="scan" placeholder="Code">
-    <button class="btn" onclick="val();">submit</button>
+    <button class="btn" onclick="val();">submit</button>  
+    <div id="outputbox">
+        <img src="qr-code1.gif">
+    </div>
+    </div> 
     <script>
         function val(){
         var item=document.getElementById("content").innerText;
