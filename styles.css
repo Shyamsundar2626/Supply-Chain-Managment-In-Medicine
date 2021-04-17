@@ -7,17 +7,19 @@
   font-family: cursive;
 } 
 body{  
-  background:  linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%); 
+  background:  url(form1.jpg)  right #d6eaff ; 
+  background-size: 800px 940px; 
   background-repeat: no-repeat;
   padding: 0 10px; 
   height: 130vh;
 } 
 .wrapper{
   max-width: 500px;
-  width: 90%;
-  background:linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  margin: 20px auto;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  width: 90%; 
+  margin-top: 30px;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  margin: 70px auto;
+  box-shadow: 5px 30px 30px rgba(0,0,0,0.125);
   padding: 30px;
 }
 
@@ -37,12 +39,12 @@ body{
 .wrapper .inputs .inputfield{
   margin-bottom: 15px;
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 .wrapper .inputs .inputfield label{
    width: 200px;
-   color: #757575;
+   color: black;
    margin-right: 10px;
   font-size: 14px;
 }
@@ -51,7 +53,7 @@ body{
 .wrapper .inputs .inputfield .textarea{
   width: 100%;
   outline: none;
-  border: 1px solid #d5dbd9;
+  border: 0.5px solid #d3d3d3;
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 3px;
@@ -75,8 +77,8 @@ body{
   position: absolute;
   top: 12px;
   right: 10px;
-  border: 8px solid;
-  border-color: #d5dbd9 transparent transparent transparent;
+  border: 8px solid; 
+  border-color: transparent transparent transparent transparent;
   pointer-events: none;
 }
 
@@ -90,7 +92,7 @@ body{
   border: 0px;
   padding: 8px 10px;
   font-size: 15px;
-  border: 1px solid #d5dbd9;
+  border: 1px solid transparent;
   border-radius: 3px;
 }
 
@@ -103,14 +105,15 @@ body{
 
 .wrapper .inputs.inputfield p{
    font-size: 14px;
-   color: #757575;
+   color: black;
 }
 .wrapper .inputs.inputfield .check{
   width: 15px;
   height: 15px;
   position: relative;
   display: block;
-  cursor: pointer;
+  cursor: pointer; 
+  color: black;
 }
 .wrapper .inputs.inputfield .check input[type="checkbox"]{
   position: absolute;
@@ -127,7 +130,7 @@ body{
 }
 .wrapper .inputs.inputfield .check .checkmark:before{
   content: "";
-  position: absolute;
+  position: absolute; 
   top: 1px;
   left: 2px;
   width: 5px;
