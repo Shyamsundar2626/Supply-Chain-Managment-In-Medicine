@@ -70,7 +70,7 @@ You're all set! Head to localhost:7545 or http://127.0.0.1:7545 on your browser 
 4. Locate to Frontend project and start development
 
 ```
-    cd frontend_project_name && run dev
+    cd frontend_project_name && npm run dev
 
 ```
 ## Built With
