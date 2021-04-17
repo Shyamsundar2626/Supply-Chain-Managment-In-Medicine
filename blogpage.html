@@ -1,102 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/index-contents.css">
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-    <link rel="icon" href="logo8.jpg" type="image/x-icon">  
-    <style type="text/css">
-      .header{
-       font-family: cursive;
-       padding-top: 20px;
-       padding-left: 20px;
-      }
-      .logo{
-        float:right;
-        padding-top: 30px;
-      }
-      #mainbox{
-       font-size: 30px; 
-       color:antiquewhite;
-       background:linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-       cursor: pointer;
-       transition: all .6s; 
-       width: 40px; 
-       
-       border-radius: 3px;
-      }
-      .sidemenu{
-       position: fixed;
-       top: 00px;
-       left: 0px;
-       height: 100%;
-       width: 0px; 
-       background: linear-gradient(transparent,  #00a4e4  , #aee1f9);
-       z-index: 1;
-       padding-top: 80px; 
-       overflow-x: hidden;
-       transition: all .5s;
-      }
-      .sidemenu a{
-       padding: 30px 30px 30px 55px;
-       text-decoration: none;
-       font-size: 22px;
-       color: black;
-       display: block; 
-       margin-right: -10px;
-      }
-      .sidemenu a:hover{
-        color: black;  
-        text-decoration: underline; 
-      } 
-      .sidemenu .closebtn{
-         position: absolute;
-         top: 0px;
-         right: 25px;
-         font-size: 55px; 
-         font-weight: 1000px; 
-         text-decoration: none; 
-         color:black;  
-         font-family: 'Courier New', Courier, monospace;
-         margin-left: 32px;
-      } 
-      .sidemenu .closebtn:hover{
-        text-decoration: none; 
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="blogpage.css">
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
 
-      }
-    </style>  
-</head>
-<body>
-          
-          <div class="header">
-            <div id="mainbox" onclick="openFunction()">&#9776; </div>
-            <div id="menu" class="sidemenu">
-             <a href="index.html">Home</a> 
-             <a href="signinregister.html">SignIn/Register</a>
-             <a href="about.html">About Us</a>
-             <a href="contactus.html">Contact Us</a>
-             <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+        <!-- header -->
+        <header>
+            <div class = "navigation-container">
+                <div class = "top-head">
+                    <div class = "web-name">
+                        <h1>FAKEQUIPO</h1>
+                    </div>
+
+                    <div class = "ham-btn">
+                        <span>
+                            <i class = "fas fa-bars"></i>
+                        </span>
+                    </div>
+
+                    <div class = "times-btn">
+                        <span>
+                            <i class = "fas fa-times"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- nav bar -->
+
+                <div class = "nav-bar" id = "nav-bar">
+                    <nav>
+                        <ul>
+                            <li><a href = "#">Home</a></li>
+                            <li><a href = "#">SignIn/Register</a></li>
+                            <li><a href = "#">About us</a></li>
+                            <li><a href = "#">Blog</a></li>
+                            <li><a href = "#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!--social icons -->
+                <div class = "social-icons">
+                    <ul>
+                        <li>
+                            <a href= "#"><i class = "fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <script type="text/javascript">
-            function openFunction(){
-             document.getElementById("menu").style.width="300px";
-             document.getElementById("mainbox").style.marginLeft="300px";
-             document.getElementById("mainbox");
-            }
-           function closeFunction(){
-            document.getElementById("menu").style.width="0px";
-            document.getElementById("mainbox").style.marginLeft="0px";
-            document.getElementById("mainbox").innerHTML="&#9776;";
-           }
-          </script>
-</body>
-</html>
+        </header>
 
+        <section class = "banner">
+            <div class = "banner-main-content">
+                <h2>NEWS ARTICLES RELATED TO FAKE MEDICINES</h2>
+                <h3>Save yourself from being Counterfieted!</h3>
+
+                <button>
+                    <a href = "#">Know More</a>
+                </button>
+
+            </div>
+
+            <div class = "banner-sub-content">
+                <div class = "hot-topic">
+                    <img src = "images/banner-news-1.png" alt = "">
+
+                    <div class = "hot-topic-content">
+                        <h2>Your medicine box may have fake drugs</h2>
+
+                        <h3></h3>
+                        <p>Bought an antacid or multivitamin lately which did not seem to have any effect? It might have been fake medicine manufactured locally by an inter-state syndicate...</p>
+                        <a href = "https://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/your-medicine-box-may-have-fake-drugs/articleshow/63351877.cms" target="_blank">Read More</a>
+                    </div>
+                </div>
+
+                <div class = "hot-topic">
+                    <img src = "images/banner-news-2.png" alt = "">
+
+                    <div class = "hot-topic-content">
+                        <h2>Is your medicine fake? Here’s how you can find out.</h2>
+
+                        <h3></h3>
+                        <p>Here are certain preventive measures you might want to take to avoid getting duped into buying fake medicines...</p>
+                        <a href = "https://health.economictimes.indiatimes.com/news/industry/is-your-medicine-fake-heres-how-you-can-find-out/66050664" target="_blank">Read More</a>
+                    </div>
+                </div>
+
+                <div class = "hot-topic">
+                    <img src = "images/banner-news-3.png" alt = "">
+
+                    <div class = "hot-topic-content">
+                        <h2>How fake drugs end up in our public health system (and how to spot them)</h2>
+
+                        <h3></h3>
+                        <p>Prescribing and using pharmaceuticals is a matter of trust. Health service providers and patients need to know medicines are genuine....</p>
+                        <a href = "https://theconversation.com/how-fake-drugs-end-up-in-our-public-health-system-and-how-to-spot-them-73594" target="_blank">Read More</a>
+                    </div>
+                </div>
+
+                <div class = "hot-topic">
+                    <img src = "images/banner-news-4.png" alt = "">
+
+                    <div class = "hot-topic-content">
+                        <h2>Counterfeit Drugs</h2>
+
+                        <h3></h3>
+                        <p>A WHO report (2017) claims 10.5 percent of medicines sold in low and middle-income countries, including India, are substandard and falsified....</p>
+                        <a href = "https://health.economictimes.indiatimes.com/news/pharma/counterfeit-drugs-threat-to-indias-reputation-of-indian-self-reliant-model/81342614" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer>
+            
+        </footer>
+
+        <script src="blogpage.js" async defer></script>
+    </body>
+</html>
