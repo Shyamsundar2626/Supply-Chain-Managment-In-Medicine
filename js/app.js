@@ -1,3 +1,4 @@
+var App = {}
 App = {
     web3Provider: null,
     contracts: {},
@@ -8,44 +9,36 @@ App = {
     expdate: null,
     emptyAddress: "0x0000000000000000000000000000000000000000",
     metamaskAccountID: "0x0000000000000000000000000000000000000000",
-    ownerID: "0x0000000000000000000000000000000000000000",
-    originManufacturerID: "0x0000000000000000000000000000000000000000",
+    ownerID: "0x651B7E7fc4E1D673110764b35fffF0CB989b6D0A",
+    originManufacturerID: "0x651B7E7fc4E1D673110764b35fffF0CB989b6D0A",
     FactoryName: null,
-    distributorID: "0x0000000000000000000000000000000000000000",
-    userID: "0x0000000000000000000000000000000000000000",
+    distributorID: "0x015f9674BC986c5a37B796A44c3a5223b9E2D973",
+    userID: "0x015f9674BC986c5a37B796A44c3a5223b9E2D973",
+    event: "",
 
     init: async function() {
-        App.readForm();
-        /// Setup access to blockchain
+        $.getJSON('../../build/contracts/main.json', function() {
+            App.batchno = $("#batchno").val();
+            App.medicineName = $("#medicineName").val();
+            App.dosage = $("#dosage").val();
+            App.FactoryName = $("#FactoryName").val();
+            App.mfgdate = $("#mfgdate").val();
+            App.expdate = $("#expdate").val();
+            App.metamaskAccountID = $("#metamaskID").val();
+
+            console.log(
+                App.batchno,
+                App.medicineName,
+                App.dosage,
+                App.FactoryName,
+                App.mfgdate,
+                App.expdate,
+                App.metamaskAccountID,
+
+            );
+        });
         return await App.initWeb3();
     },
-
-    readForm: function() {
-        App.batchno = $("#batchno").val();
-        App.medicineName = $("#medicineName").val();
-        App.dosage = $("#dosage").val();
-        //App.ownerID = $("#ownerID").val();
-        //App.originManufacturerID = $("#originManufacturerID").val();
-        App.FactoryName = $("#FactoryName").val();
-        App.mfgdate = $("#mfgdate").val();
-        App.expdate = $("#expdate").val();
-        //App.distributorID = $("#distributorID").val();
-        //App.userID = $("#userID").val();
-
-        console.log(
-            App.batchno,
-            App.medicineName,
-            App.doasage,
-            //App.ownerID, 
-            //App.originManufacturerID, 
-            App.FactoryName,
-            App.mfgdate,
-            App.expdate,
-            //App.distributorID,  
-            //App.userID
-        );
-    },
-
     initWeb3: async function() {
         /// Find or Inject Web3 Provider
         /// Modern dapp browsers...
@@ -65,15 +58,15 @@ App = {
         }
         // If no injected web3 instance is detected, fall back to Ganache
         else {
-            App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+            App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
         }
 
-        App.getMetaskAccountID();
+        App.getMetamaskAccountID();
 
         return App.initmain();
     },
 
-    getMetaskAccountID: function() {
+    getMetamaskAccountID: function() {
         web3 = new Web3(App.web3Provider);
 
         // Retrieving accounts
@@ -82,14 +75,13 @@ App = {
                 console.log('Error:', err);
                 return;
             }
-            console.log('getMetaskID:', res);
+            console.log('getMetamaskID:', res);
             App.metamaskAccountID = res[0];
 
         })
     },
-
     initmain: function() {
-        /// Source the truffle compiled smart contracts
+        /// Source the truffle compiled smart contr 
         var jsonmain = '../../build/contracts/main.json';
 
         /// JSONfy the smart contracts
@@ -99,8 +91,6 @@ App = {
             App.contracts.main = TruffleContract(mainArtifact);
             App.contracts.main.setProvider(App.web3Provider);
 
-            App.fetchMedicineBufferOne();
-            App.fetchMedicineBufferTwo();
             App.fetchEvents();
 
         });
@@ -109,16 +99,18 @@ App = {
     },
 
     bindEvents: function() {
+
         $(document).on('click', App.handleButtonClick);
+
+
     },
 
     handleButtonClick: async function(event) {
         event.preventDefault();
-
-        App.getMetaskAccountID();
+        App.getMetamaskAccountID();
 
         var processId = parseInt($(event.target).data('id'));
-        console.log('processId', processId);
+
 
         switch (processId) {
             case 1:
@@ -131,40 +123,46 @@ App = {
             case 3:
                 return await App.receiveMedicine(event);
                 break;
-            case 4:
-                return await App.fetchMedicineBufferOne(event);
-                break;
-            case 5:
-                return await App.fetchMedicineBufferTwo(event);
-                break;
+                /*case 4:
+                    return await App.fetchMedicineBufferOne();
+                    break;
+                case 5:
+                    return await App.fetchMedicineBufferTwo();
+                    break;*/
         }
+        console.log('processId', processId);
     },
 
-    makeMedicine: function(event) {
-        event.preventDefault();
-        var processId = parseInt($(event.target).data('id'));
+    makeMedicine: async function(event) {
+        //event.preventDefault();
+        //var processId = parseInt($(event.target).data('id'));
+        App.contracts.main.deployed().then($.getJSON('../../build/contracts/main.json', function() {
+                return event.makeMedicine(
+                    console.log(App.batchno),
+                    console.log(App.medicineName),
+                    console.log(App.dosage),
+                    console.log(App.FactoryName),
+                    console.log(App.mfgdate),
+                    console.log(App.expdate),
+                    console.log(App.metamaskAccountID),
+                    console.log(App.ownerID),
+                    console.log(App.originManufacturerID),
+                    console.log(App.distributorID),
+                    console.log(App.userID),
 
-        App.contracts.main.deployed().then(function(instance) {
-            return instance.makeMedicine(
-                App.batchno,
-                App.metamaskAccountID,
-                App.FactoryName,
-                App.medicineName,
-                App.dosage,
-                App.mfgdate,
-                App.expdate
-            );
-        }).then(function(result) {
-            $("#ftc-medicine").text(result);
-            console.log('makeMedicine', result);
-        }).catch(function(err) {
-            console.log(err.message);
-        });
+                ).then(function(result) {
+                    $("#ftc-medicine").text(result);
+                    console.log('makeMedicine', result);
+                });
+            }),
+
+        );
+
     },
 
-    packMedicine: function(event) {
-        event.preventDefault();
-        var processId = parseInt($(event.target).data('id'));
+    packMedicine: async function(event) {
+        //event.preventDefault();
+        //var processId = parseInt($(event.target).data('id'));
 
         App.contracts.main.deployed().then(function(instance) {
             return instance.packMedicine(App.batchno, { from: App.metamaskAccountID });
@@ -177,8 +175,8 @@ App = {
     },
 
     receiveMedicine: function(event) {
-        event.preventDefault();
-        var processId = parseInt($(event.target).data('id'));
+        //event.preventDefault();
+        //var processId = parseInt($(event3.target).data('id'));
 
         App.contracts.main.deployed().then(function(instance) {
             return instance.receiveMedicine(App.batchno, { from: App.metamaskAccountID });
@@ -192,15 +190,15 @@ App = {
 
 
     fetchMedicineBufferOne: function() {
-        ///   event.preventDefault();
-        ///    var processId = parseInt($(event.target).data('id'));
+        //event.preventDefault();
+        //var processId = parseInt($(event.target).data('id'));
         App.batchno = $('#batchno').val();
         console.log('batchno', App.batchno);
 
         App.contracts.main.deployed().then(function(instance) {
             return instance.fetchMedicineBufferOne(App.batchno);
         }).then(function(result) {
-            $("#ftc-medicine").text(result);
+            $("#ftc-medicines").text(result);
             console.log('fetchMedicineBufferOne', result);
         }).catch(function(err) {
             console.log(err.message);
@@ -208,13 +206,13 @@ App = {
     },
 
     fetchMedicineBufferTwo: function() {
-        ///    event.preventDefault();
-        ///    var processId = parseInt($(event.target).data('id'));
+        //event.preventDefault();
+        //var processId = parseInt($(event.target).data('id'));
 
         App.contracts.main.deployed().then(function(instance) {
             return instance.fetchMedicineBufferTwo.call(App.batchno);
         }).then(function(result) {
-            $("#ftc-medicine").text(result);
+            $("#ftc-medicines").text(result);
             console.log('fetchMedicineBufferTwo', result);
         }).catch(function(err) {
             console.log(err.message);

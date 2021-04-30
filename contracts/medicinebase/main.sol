@@ -85,7 +85,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
   // Define a function 'makeMedicine' that allows a manufacturer to mark a medicine 'Made'
   function makeMedicine(string memory _batchno, string memory _medicineName,string memory _dosage, address  _originManufacturerID,address _ownerID, string memory _FactoryName, string memory _mfgdate,string memory _expdate,State,address _distributorID,address _userID) public
   
-  //onlymanufacturer
+  onlyManufacturer
 
   {
     // Add the new medicine as part of medicines
@@ -123,7 +123,8 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     emit Made(_batchno);
   }
   // Define a function 'packMedicine' that allows a manufacturer to mark an medicine 'Packed'
-  function packMedicine(string  memory _batchno) public 
+  function packMedicine(string  memory _batchno) public
+  onlyDistributor 
   // Call modifier to check if batchno has passed previous supply chain stage
   //Made(_batchno)
   // Call modifier to verify caller of this function
@@ -135,6 +136,7 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
     emit Packed(_batchno);
   }
   function receiveMedicine(string memory _batchno) public 
+  onlyUser
     // Call modifier to check if batchno has passed previous supply chain stage
     //Packed(_batchno)
     // Access Control List enforced by calling Smart Contract / DApp

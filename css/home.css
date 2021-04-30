@@ -6,18 +6,16 @@
          margin: 0;
          font-family: cursive; 
          font-size: 20px;
-         font-weight: 400;
-         line-height: 1.8em; 
-         color: #666;
+         font-weight: 400;  
   } 
   
   
   .pimg1, .pimg2{
-      height: 87vh;
+      height: 90vh; 
+      background-size: cover ;
       -webkit-background-size:cover;
       position: relative;
       background-position: center;
-      background-size: cover;
       background-repeat: no-repeat;
       opacity:1;
       /*this is what make us have that parallax effects 
@@ -42,28 +40,34 @@
   }
 
 .welcome-text {
-  position:absolute;
 	width: 500px;
 	height: 300px;
-	margin: 10% 30%;
-	text-align: left;
-}
+  margin: 10% 30%; 
+} 
 .welcome-text h1 { 
-	text-align: justify;
-  font-family: Poppins;
-  margin-left:-370px;
-	margin-top: 120px;
-	color:yellow;
+	text-align: justify; 
+  position:fixed; 
+  font-family: 'Ultra',serif;
+  margin-left:-110px;
+	margin-top: 50px;  
+  background:  linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
 	text-transform: uppercase;
-	font-size: 90px;
-  font-style: italic;
-  font-weight: bolder;
+	font-size: 130px;
 }
-.welcome-text h1 span{
-  color:whitesmoke;
-  font-weight: bolder;
-  font-style: italic;
-}  
+.welcome-text h2{
+  text-align: right; 
+  position: fixed; 
+  font-family: 'Ultra',serif;
+  margin-top: 270px; 
+  margin-left: 605px; 
+  background:  linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
+  text-transform: uppercase; 
+  font-size: 130px;
+}   
 
 .welcome-text a {
 	border: 1px solid #fff;
@@ -76,21 +80,9 @@
 	color: #fff;
 }
 .welcome-text a:hover {
-	background: #fff;
+	background: transparent;
 	color:#fff;
 }
-.welcome-text h2{
-	font-size: 20px;
-	margin-top: -75px;
-	margin-left: -300px;
-	color:white;
-	font-family: Zapf Chancery,cursive; 
-	font-weight: 9px;
-	font-variant: inherit;
-	font-stretch: ultra-expanded;
-	
-}
-
   .ptext{
       position: absolute;
       top: 50%;

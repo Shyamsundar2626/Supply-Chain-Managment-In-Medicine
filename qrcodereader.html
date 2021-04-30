@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="qrcodereader.css">
+    <title>Document</title>
+</head>
+<body> 
+    <div id="box">
+    <input class="file__upload" type="file" name="file" id="file" required>
+    <button class="btn" onclick="val();">submit</button>
+    <p>Qr Content:<span id="content"></span></p>
+    <!--To Read QR code -->
+	<script type="text/javascript" src="qrReader.js"></script>
+   
+    <input class="qrcode" type="text" id="scan" placeholder="Code">
+    <button class="btn" onclick="val();">submit</button>  
+    <div id="outputbox">
+        <img src="qr-code1.gif">
+    </div>
+    </div> 
+    <script>
+        function val(){
+        var item=document.getElementById("content").innerText;
+        document.getElementById("scan").value=item;
+    }
+        
+</script>
+</body>
+</html>
+
+

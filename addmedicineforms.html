@@ -30,33 +30,34 @@
             <div class="inputs">
                 <div class="inputfield">
                     <label>batchno:</label>
-                    <input id="company name" type="text" class="input" required>
+                    <input id="batchno" type="text" class="input" required>
                 </div>
                 <div class="inputfield">
-                    <label>medicineName:</label>
-                    <input id="medicine name" type="text" class="input" required>
+                    <label>medicine Name</label>
+                    <input id="medicineName" type="text" class="input" required>
                 </div>
                 <div class="inputfield">
-                    <label>dosage:</label>
+                    <label>dosage</label>
                     <input id="dosage" type="text" class="input" required>
                 </div>
                 <div class="inputfield">
-                    <label>FactoryName:</label>
-                    <input id="batch no" type="text" class="input" required>
+                    <label>metamask id:</label>
+                    <input id="originManufacturerID" type="text" class="input" required>
                 </div>
                 <div class="inputfield">
                     <label>mfgdate:</label>
-                    <input id="mfg date" type="text" class="input" required>
+                    <input id="mfgdate" type="text" class="input" required>
                 </div>
                 <div class="inputfield">
                     <label>expdate:</label>
-                    <input id="exp date" type="text" class="input" required>
+                    <input id="expdate" type="text" class="input" required>
                 </div>
                 <div class="inputfield">
-                    <label>metamask id:</label>
-                    <input id="metamask id" type="text" class="input" required>
+                    <label>FactoryName:</label>
+                    <input id="FactoryName" type="text" class="input" required>
                 </div>
-                <input class="button" type="button" value="Submit" onclick="App.readForm();">
+                <input class="button" type="button" value="Submit" onclick="App.init();">
+                <input class="button" type="button" value="Make" id="click" onclick="App.makeMedicine(event);">
             </div>
         </form>
     </div>
@@ -82,8 +83,8 @@
     }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/app.1.js"></script>
 <script src="js/web3.min.js"></script>
-<script src="js/truffle-contract.js"></script>
+<script src="js/truffle-contract copy.js"></script>
 
 </html>

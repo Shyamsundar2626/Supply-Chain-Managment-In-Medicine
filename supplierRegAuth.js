@@ -36,7 +36,7 @@ saveMessage(fname, lname,emailid, mname, address, postalcode, medno, phno, govli
 
 //Alert Message
 window.alert('Your messages has been sent!'); 
-window.location.href="imgupload.html";
+window.location.href="qrcodereader.html";
 
 // Clear form
 document.getElementById('supplierform').reset();
