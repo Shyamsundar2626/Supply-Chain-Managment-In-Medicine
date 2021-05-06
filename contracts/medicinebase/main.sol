@@ -46,9 +46,9 @@ contract main is UserRole, ManufacturerRole, DistributorRole {
   }
 
   // Define 8 events with the same 7 state values and accept 'batchno' as input argument
-  event Made(string batchno);
-  event Packed(string batchno);
-  event Sold(string batchno);
+  event Made(string _batchno);
+  event Packed(string _batchno);
+  event Sold(string _batchno);
 
   // Define a modifer that checks to see if msg.sender == owner of the contract
   modifier onlyOwner() {
