@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="qrReader.js"></script>
    
     <input class="qrcode" type="text" id="scan" placeholder="Code">
-    <button class="btn" onclick="val();">submit</button>  
+    <button class="btn" onclick="val1();">submit</button>  
     <div id="outputbox">
         <img src="qr-code1.gif">
     </div>
@@ -25,6 +25,9 @@
         function val(){
         var item=document.getElementById("content").innerText;
         document.getElementById("scan").value=item;
+    }
+    function val1(){
+        window.location.href="detailsdisplay.html";
     }
         
 </script>
