@@ -3,84 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add medicine Forms</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="navbar.css">
+    <title>Details display</title>
 </head>
 
 <body>
-
-    <div class="header">
-        <div id="mainbox" onclick="openFunction()">&#9776; </div>
-        <div id="menu" class="sidemenu">
-            <a href="index.html">Home</a>
-            <a href="signinregister.html">SignIn/Register</a>
-            <a href="about.html">About Us</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="index.html">Logout</a>
-            <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
-        </div>
-    </div>
-    <div class="wrapper">
-        <div class="title">
-            Add medicine Forms
-        </div>
-        <form role="form" id="manufacturerform" action="" method="GET">
-            <div class="inputs">
-                <div class="inputfield">
-                    <label>batchno:</label>
-                    <input id="batchno" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>medicine Name</label>
-                    <input id="medicineName" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>dosage</label>
-                    <input id="dosage" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>metamask id:</label>
-                    <input id="originManufacturerID" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>mfgdate:</label>
-                    <input id="mfgdate" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>expdate:</label>
-                    <input id="expdate" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>FactoryName:</label>
-                    <input id="FactoryName" type="text" class="input" required>
-                </div>
-                <input class="button" type="submit" value="Submit">
-                <input class="button" type="button" value="Make" id="click">
+    <form role="form" id="form" action="" method="GET">
+        <div class="inputs">
+            <div class="inputfield">
+                <label>batchno:</label>
+                <input id="batchno" type="text" class="input" required>
             </div>
-        </form>
-    </div>
-    <script>
-        function success() {
-            window.alert("Successful");
-            window.location.href = "download.html";
-        }
-    </script>
-
-    <script type="text/javascript">
-        function openFunction() {
-            document.getElementById("menu").style.width = "300px";
-            document.getElementById("mainbox").style.marginLeft = "300px";
-            document.getElementById("mainbox");
-        }
-
-        function closeFunction() {
-            document.getElementById("menu").style.width = "0px";
-            document.getElementById("mainbox").style.marginLeft = "0px";
-            document.getElementById("mainbox").innerHTML = "&#9776;";
-        }
-    </script>
+        </div>
+        <input class="button" type="submit" value="Submit">
+    </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--script src="js/app.1.js"></script-->
     <script src="js/web3.min.js"></script>
@@ -446,41 +383,19 @@
 
         // Set the Contract
         var contract = new web3.eth.Contract(contractAbi, contractAddress);
-
-        /*Display the Greeting
-        contract.methods.greet().call(function(err, result) {
-          console.log(err, result)
-          $('#greeting').html(result);
-        });*/
-
-        // Change the Greeting
         $('form').on('submit', function(event) {
             event.preventDefault();
             batchno = $("#batchno").val();
-            medicineName = $("#medicineName").val();
-            dosage = $("#dosage").val();
-            //App.ownerID = $("#ownerID").val();
-            originManufacturerID = $("#originManufacturerID").val();
-            ownerID = $("#originManufacturerID").val();
-            mfgdate = $("#mfgdate").val();
-            expdate = $("#expdate").val();
-            FactoryName = $("#FactoryName").val();
-            medicineState = 1
-            distributorID = '0x015f9674BC986c5a37B796A44c3a5223b9E2D973'
-            userID = '0x7BD1a8DB4Ce9bB2a61572E5535bF3961B88807B0'
             console.log(batchno)
-            console.log(medicineName)
-            console.log(dosage)
-            console.log(originManufacturerID)
-            console.log(expdate)
-            console.log(FactoryName)
-            web3.eth.getAccounts().then(function(accounts) {
-                contract.methods.makeMedicine(batchno, medicineName, dosage, originManufacturerID, ownerID, mfgdate, expdate, FactoryName, medicineState, distributorID, userID).send({
-                    from: accounts[0]
-                });
-            });
+        });
+
+        //Display the Medicine
+        contract.methods.fetchMedicineBufferOne().call(function(err, result) {
+            console.log(err, result)
+            $('#batchno').html(result);
         });
     </script>
+
 </body>
 
 </html>
