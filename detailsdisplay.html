@@ -17,6 +17,17 @@
             </div>
         </div>
         <input class="button" type="submit" value="Submit">
+        <p id="medicines1"></p>
+        <p id="medicines2"></p>
+        <p id="medicines3"></p>
+        <p id="medicines4"></p>
+        <p id="medicines5"></p>
+        <!--p id="medicines6"></p-->
+        <p id="medicine7"></p>
+        <p id="medicines8"></p>
+        <p id="medicines9"></p>
+        <p id="medicines10"></p>
+
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--script src="js/app.1.js"></script-->
@@ -312,7 +323,7 @@
                 "type": "string"
             }, {
                 "internalType": "enum main.State",
-                "name": "",
+                "name": "Made",
                 "type": "uint8"
             }, {
                 "internalType": "address",
@@ -379,7 +390,7 @@
         }]; // Add Your Contract ABI here!!!
 
         // Set Contract Address
-        var contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; // Add Your Contract address here!!!
+        var contractAddress = '0x7cB621da612dB349Bcbc2CB8918E7C1C244Df672'; // Add Your Contract address here!!!
 
         // Set the Contract
         var contract = new web3.eth.Contract(contractAbi, contractAddress);
@@ -387,12 +398,29 @@
             event.preventDefault();
             batchno = $("#batchno").val();
             console.log(batchno)
-        });
+                //Display the Medicine
+            contract.methods.fetchMedicineBufferOne(batchno).call(function(err, result) {
+                console.log(err, result)
+                    //document.write(result.toString().trim())
+                $("#medicines1").text(result[0]);
+                $("#medicines2").text(result[1]);
+                $("#medicines3").text(result[2]);
+                $("#medicines4").text(result[3]);
+                $("#medicines5").text(result[4]);
 
-        //Display the Medicine
-        contract.methods.fetchMedicineBufferOne().call(function(err, result) {
-            console.log(err, result)
-            $('#batchno').html(result);
+
+            });
+            contract.methods.fetchMedicineBufferTwo(batchno).call(function(err, result) {
+                console.log(err, result)
+                    //document.write(result.toString().trim())
+                    //$("#medicines6").text(result[0]);
+                $("#medicine7").text(result[1]);
+                $("#medicines8").text(result[2]);
+                $("#medicines9").text(result[3]);
+                $("#medicines10").text(result[4]);
+
+
+            });
         });
     </script>
 
