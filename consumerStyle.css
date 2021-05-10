@@ -229,3 +229,18 @@ input {
 	height: 40px;
 	width: 40px;
 }
+@media screen and (max-width:980px) {
+	body{
+	background: url(signin4.jpg) no-repeat center; 
+	 background-size: 1720px 1840px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: cursive;
+	height: 90vh;
+	opacity: 0.9;
+	margin: -20px 0 50px;
+	}
+	
+}
