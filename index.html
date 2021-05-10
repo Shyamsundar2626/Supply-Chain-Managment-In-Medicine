@@ -22,14 +22,19 @@
         }
         
         .logo {
-            float: right;
-            padding-top: 30px;
+            float: right; 
+            position: fixed; 
+            padding-top: -10px; 
         }
         
         #mainbox {
-            font-size: 30px;
-            color: antiquewhite;
-            background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+            font-size: 40px;  
+            position: fixed;
+            margin-top: -50px; 
+            margin-left: 45px; 
+            color: black; 
+            font-weight: bolder;
+            background: transparent;
             cursor: pointer;
             transition: all .6s;
             width: 40px;
@@ -42,7 +47,7 @@
             left: 0px;
             height: 100%;
             width: 0px;
-            background: linear-gradient(transparent, #00a4e4, #aee1f9);
+            background: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
             z-index: 1;
             padding-top: 80px;
             overflow-x: hidden;
@@ -52,7 +57,11 @@
         .sidemenu a {
             padding: 30px 30px 30px 55px;
             text-decoration: none;
-            font-size: 22px;
+            font-size: 22px; 
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+            font-style: italic; 
+            font-weight: bolder;
+            font-stretch: ultra-expanded;
             color: black;
             display: block;
             margin-right: -10px;
@@ -82,10 +91,12 @@
 </head>
 
 <body>
-    <div class="pimg1" style="background-image: url('background website 1.jpg'); background-size: 1600px 725px;padding-right: 230px; padding-top:-100px;margin-bottom: 0px; opacity: 0.9;">
+    <div style="background: linear-gradient(315deg, #7f53ac 0%, #647dee 74%); height: 0px; width: 405px; padding-right: 230px; padding-top:-200px;margin-bottom: 0px; margin-top: 74px; opacity: 0.9;"></div>
         <div class="welcome-text">
-            <h1 data-text="Fake">Fake<span data-text="Quipo">Quipo</span></h1>
-            <h2>Save yourself from being counterfeited</h2> 
+            <h1 data-text="Fake">Fake<span data-text="Quipo">Quipo</span></h1> 
+            <div class="border" style="height: 94px ;width: 6px; margin-left: -362px; margin-top: -165px; color: #DF6589FF;"></div>
+            <h2>Save yourself from being counterfeited !!</h2>  
+            <img src="frontsideimg2.png" style="height: 550px; width: 700px; margin-top: -380px; margin-left: 320px; opacity: 0.9;">
         </div>
         <div class="header">
             <div id="mainbox" onclick="openFunction()">&#9776; </div>
@@ -97,12 +108,9 @@
                 <a href="blogpage.html">Blog</a>
                 <a href="contactus.html">Contact Us</a>
                 <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
-            </div>
-        </div>
-    </div> 
-
-
-    </div>
+            </div> 
+            <img src="wave (2).svg" style="height: 700px; width: 1790px; margin-top: 120px; margin-bottom: -154px; margin-left: -25px; overflow: hidden;">
+        </div>  
 
     <section class="section section-light">
         <h1>How does our website work?</h1>

@@ -1,17 +1,24 @@
  /* //////////////////////// CONTENTS ///////////////////////////// */
- 
+body{
+  overflow-x: hidden;
+} 
  body,
- html {
-     height: 100%;
+ html { 
+   padding-left: -10px ;
+     height: 40vh;  
+     width: 101%;
      margin: 0;
      font-family: cursive;
      font-size: 20px;
-     font-weight: 400;
+     font-weight: 400; 
+     background: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);        
+     background-size: 100% 300%;
+     overflow-bottom: hidden;
  }
  
  .pimg1,
  .pimg2 {
-     height: 90vh;
+     height: 80vh;
      background-size: cover;
      -webkit-background-size: cover;
      position: relative;
@@ -23,14 +30,16 @@ if we wanna remove that effect we have to set to scroll */
      background-attachment: fixed;
  }
  
- .section {
+ .section {  
+   overflow-x: hidden;
+     margin-top: 500px; 
      text-align: center;
-     padding: 50px 80px;
+     padding: 50px 80px; 
  }
  
- .section-light {
+ .section-light { 
+   margin-top: -50px;
      background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-     ;
      color: black;
      font-family: cursive;
  }
@@ -62,20 +71,20 @@ if we wanna remove that effect we have to set to scroll */
  
  .welcome-text h1 {
      text-align: justify;
-     font-family: Poppins;
-     margin-left: -300px;
-     margin-top: 70px;
-     color: blue;
+     font-family: poppins;
+     margin-left: -330px;
+     margin-top: 10px;
+     color: white;
      text-transform: uppercase;
      font-size: 95px;
-     font-style: italic;
+     font-style: none;
      font-weight: bolder;
  }
  
  .welcome-text h1 span {
      color: whitesmoke;
      font-weight: bolder;
-     font-style: italic;
+     font-style: none;
  }
  
  .welcome-text a {
@@ -83,7 +92,7 @@ if we wanna remove that effect we have to set to scroll */
      padding: 10px 25px;
      text-decoration: none;
      text-transform: uppercase;
-     font-size: 14px;
+     font-size: 16px; 
      margin-top: 20px;
      display: inline-block;
      color: #fff;
@@ -95,12 +104,13 @@ if we wanna remove that effect we have to set to scroll */
  }
  
  .welcome-text h2 {
-     font-size: 20px;
-     margin-top: -65px;
-     margin-left: -250px;
+     font-size: 25px;
+     margin-top: 12px;
+     margin-left: -290px;
      color: white;
-     font-family: Zapf Chancery, cursive;
-     font-weight: 9px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+     font-style: italic;
+     font-weight: 12px;
      font-variant: inherit;
      font-stretch: ultra-expanded;
  }
