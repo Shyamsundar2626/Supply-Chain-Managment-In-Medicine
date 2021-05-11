@@ -2,13 +2,15 @@
 var firebaseConfig = {
     apiKey: "AIzaSyDVG-YpPPNlsZVo_kAogIRlCRTRLHeviW0",
     authDomain: "contact-us-8917b.firebaseapp.com",
+    databaseURL: "https://contact-us-8917b-default-rtdb.firebaseio.com",
     projectId: "contact-us-8917b",
     storageBucket: "contact-us-8917b.appspot.com",
     messagingSenderId: "530318850288",
     appId: "1:530318850288:web:4f1b0dd9264b14cd61aa35"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 //Reference Message Collection 
 var messagesRef = firebase.database().ref('messages');
@@ -21,14 +23,13 @@ function submitForm(e){
     e.preventDefault();
 
 //Get Values
-var fname = getInputVal('fname');
-var lname = getInputVal('lname');
+var name = getInputVal('name');
+var email = getInputVal('email');
 var contactno = getInputVal('contactno');
-var emailid = getInputVal('emailid');
-var Feedback = getInputVal('Feedback');    
+var message = getInputVal('message');    
 
 //Save Message 
-saveMessage(fname, lname, contactno, emailid, Feedback); 
+saveMessage(name, email, contactno, message); 
 
 //Alert Message
 window.alert('Your messages has been sent!');
@@ -43,14 +44,13 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(fname, lname, contactno, emailid, Feedback){
+function saveMessage(name, email, contactno, message){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
-      fname: fname ,
-      lname: lname,
+      name: name,
+      email: email,
       contactno: contactno,
-      emailid: emailid,
-      Feedback: Feedback
+      message: message
     });
   }
 

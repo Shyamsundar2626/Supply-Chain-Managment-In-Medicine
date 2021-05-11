@@ -7,7 +7,8 @@
   
   .services-section{
     background: url(abtsection.gif); 
-    background-size: 100% 100%; 
+    background-size: 100% 100%;  
+    max-width: 100%;
     background-repeat: no-repeat;
     padding: 50px 0px ; 
     min-height: 100vh;
