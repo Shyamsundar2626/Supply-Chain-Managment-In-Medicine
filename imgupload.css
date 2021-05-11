@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,8 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background:whitesmoke;
+    background: whitesmoke;
+    background-image: linear-gradient(to top, #126fda 0%, #8421f5f8 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,14 +21,15 @@ body {
     width: 400px;
     height: 445px;
     margin: 20px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
 }
 
 .file__upload .header {
     width: 100%;
     height: 145px;
-    background:blue;
-    opacity:1.5;
+    background: rgba(80, 5, 99, 0.664);
+    background-image: linear-gradient(to right, #1a77ad 0%, #2f0df1 100%);
+    opacity: 1.5;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -55,6 +56,7 @@ body {
 
 .file__upload .body {
     background: #FFF;
+    /*background-image: linear-gradient(to top, #30cfd0 0%, #080a67 100%);*/
     width: 100%;
     height: calc(100% - 145px);
     border-radius: 0 0 10px 10px;
@@ -75,16 +77,17 @@ body {
 }
 
 .file__upload .body p strong {
-    color:blue;
+    color: rgb(61, 11, 119);
 }
 
 .file__upload .body p span {
-    color: blue;
+    color: rgb(61, 11, 119);
     text-decoration: underline;
 }
 
 .btn {
-    background: blue;
+    background: rgb(61, 11, 119);
+    background-image: linear-gradient(to right, #1a77ad 0%, #2f0df1 100%);
     border: none;
     outline: none;
     margin: 20px 0;
@@ -107,7 +110,7 @@ body {
 
 #link {
     border: 1px solid;
-    color: blue;
+    color: rgb(61, 11, 119);
     background: none;
     width: calc(100% - 20px);
     border-radius: 0;
@@ -118,13 +121,13 @@ body {
     display: none;
 }
 
-#link_checkbox:checked ~ #link {
+#link_checkbox:checked~#link {
     display: block;
 }
 
 label[for="link_checkbox"] {
     padding: .5rem 2rem;
-    background: blue;
+    background: rgb(61, 11, 119);
     color: #FFF;
     outline: none;
     cursor: pointer;
@@ -133,7 +136,7 @@ label[for="link_checkbox"] {
 .download .download_link {
     text-decoration: none;
     color: #FFF;
-    background: blue;
+    background: rgb(61, 11, 119);
     padding: .5rem 2rem;
     border-radius: 3px;
     opacity: .8;

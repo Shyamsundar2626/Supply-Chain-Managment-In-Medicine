@@ -1,37 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="qrcodereader.css">
     <title>Document</title>
 </head>
-<body> 
+
+<body>
     <div id="box">
-    <input class="file__upload" type="file" name="file" id="file" required>
-    <button class="btn" onclick="val();">submit</button>
-    <p>Qr Content:<span id="content"></span></p>
-    <!--To Read QR code -->
-	<script type="text/javascript" src="qrReader.js"></script>
-   
-    <input class="qrcode" type="text" id="scan" placeholder="Code">
-    <button class="btn" onclick="val1();">submit</button>  
-    <div id="outputbox">
-        <img src="qr-code1.gif">
+        <input class="file__upload" type="file" name="file" id="file" required>
+        <button class="btn" onclick="val();">submit</button>
+        <p>Qr Content:<span id="content"></span></p>
+        <!--To Read QR code -->
+        <script type="text/javascript" src="qrReader.js"></script>
+
+        <input class="qrcode" type="text" id="scan" placeholder="Code">
+        <button class="btn" onclick="val1();">submit</button>
+        <div id="outputbox">
+            <img src="qr-code1.gif">
+        </div>
     </div>
-    </div> 
     <script>
-        function val(){
-        var item=document.getElementById("content").innerText;
-        document.getElementById("scan").value=item;
-    }
-    function val1(){
-        window.location.href="detailsdisplay.html";
-    }
-        
-</script>
+        function val() {
+            var item = document.getElementById("content").innerText;
+            document.getElementById("scan").value = item;
+        }
+
+        function val1() {
+            window.location.href = "detailsdisplay.html";
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--script src="js/app.1.js"></script-->
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract copy.js"></script>
+    <script>
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+        }
+
+        // Set Contract Abi
+        var contractAbi = [{
+            "anonymous": false,
+            "inputs": [{
+                "indexed": true,
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "DistributorAdded",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": true,
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "DistributorRemoved",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": false,
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }],
+            "name": "Made",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": true,
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "ManufacturerAdded",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": true,
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "ManufacturerRemoved",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": false,
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }],
+            "name": "Packed",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": false,
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }],
+            "name": "Sold",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": true,
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "UserAdded",
+            "type": "event"
+        }, {
+            "anonymous": false,
+            "inputs": [{
+                "indexed": true,
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "UserRemoved",
+            "type": "event"
+        }, {
+            "constant": false,
+            "inputs": [{
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "addDistributor",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [{
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "addManufacturer",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [{
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "addUser",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": true,
+            "inputs": [{
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }],
+            "name": "fetchMedicineBufferOne",
+            "outputs": [{
+                "internalType": "string",
+                "name": "batchno",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "medicineName",
+                "type": "string"
+            }, {
+                "internalType": "address",
+                "name": "ownerID",
+                "type": "address"
+            }, {
+                "internalType": "address",
+                "name": "originManufacturerID",
+                "type": "address"
+            }, {
+                "internalType": "string",
+                "name": "dosage",
+                "type": "string"
+            }, {
+                "internalType": "enum main.State",
+                "name": "medicineState",
+                "type": "uint8"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }, {
+            "constant": true,
+            "inputs": [{
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }],
+            "name": "fetchMedicineBufferTwo",
+            "outputs": [{
+                "internalType": "string",
+                "name": "batchno",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "FactoryName",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "mfgdate",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "expdate",
+                "type": "string"
+            }, {
+                "internalType": "address",
+                "name": "distributorID",
+                "type": "address"
+            }, {
+                "internalType": "address",
+                "name": "userID",
+                "type": "address"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }, {
+            "constant": true,
+            "inputs": [{
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "isDistributor",
+            "outputs": [{
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }, {
+            "constant": true,
+            "inputs": [{
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "isManufacturer",
+            "outputs": [{
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }, {
+            "constant": true,
+            "inputs": [{
+                "internalType": "address",
+                "name": "account",
+                "type": "address"
+            }],
+            "name": "isUser",
+            "outputs": [{
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [{
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "_medicineName",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "_dosage",
+                "type": "string"
+            }, {
+                "internalType": "address",
+                "name": "_originManufacturerID",
+                "type": "address"
+            }, {
+                "internalType": "address",
+                "name": "_ownerID",
+                "type": "address"
+            }, {
+                "internalType": "string",
+                "name": "_FactoryName",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "_mfgdate",
+                "type": "string"
+            }, {
+                "internalType": "string",
+                "name": "_expdate",
+                "type": "string"
+            }, {
+                "internalType": "enum main.State",
+                "name": "Made",
+                "type": "uint8"
+            }, {
+                "internalType": "address",
+                "name": "_distributorID",
+                "type": "address"
+            }, {
+                "internalType": "address",
+                "name": "_userID",
+                "type": "address"
+            }],
+            "name": "makeMedicine",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [{
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }],
+            "name": "packMedicine",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [{
+                "internalType": "string",
+                "name": "_batchno",
+                "type": "string"
+            }],
+            "name": "receiveMedicine",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [],
+            "name": "renounceDistributor",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [],
+            "name": "renounceManufacturer",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }, {
+            "constant": false,
+            "inputs": [],
+            "name": "renounceUser",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }]; // Add Your Contract ABI here!!!
+
+        // Set Contract Address
+        var contractAddress = '0x7cB621da612dB349Bcbc2CB8918E7C1C244Df672'; // Add Your Contract address here!!!
+
+        // Set the Contract
+        var contract = new web3.eth.Contract(contractAbi, contractAddress);
+        $('box').on('scan', function(event) {
+            event.preventDefault();
+            batchno = $("#content").val();
+            console.log(batchno)
+                //Display the Medicine
+            contract.methods.fetchMedicineBufferOne(batchno).call(function(err, result) {
+                console.log(err, result)
+                document.write(result[0] + "\n")
+                document.write("<br>" + result[1] + "<br>")
+                document.write(result[2] + "<br>")
+                document.write(result[3] + "<br>")
+                document.write(result[4] + "<br>")
+
+                /*$("#medicines1").text(result[0]);
+                $("#medicines2").text(result[1]);
+                $("#medicines3").text(result[2]);
+                $("#medicines4").text(result[3]);
+                $("#medicines5").text(result[4]);*/
+
+
+            });
+            contract.methods.fetchMedicineBufferTwo(batchno).call(function(err, result) {
+                console.log(err, result)
+                    //document.write(result.toString().trim())
+                    //$("#medicines6").text(result[0]);
+                document.write(result[1] + "<br>")
+                document.write(result[2] + "<br>")
+                document.write(result[3] + "<br>")
+                document.write(result[4] + "<br>")
+                    /*$("#medicine7").text(result[1]);
+                    $("#medicines8").text(result[2]);
+                    $("#medicines9").text(result[3]);
+                    $("#medicines10").text(result[4]);*/
+
+
+            });
+        });
+    </script>
+
 </body>
+
 </html>
-
-
