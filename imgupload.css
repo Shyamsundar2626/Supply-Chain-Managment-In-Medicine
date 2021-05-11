@@ -10,7 +10,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background: whitesmoke;
-    background-image: linear-gradient(to top, #126fda 0%, #8421f5f8 100%);
+    background-image: linear-gradient(to top, #6fa6e6 0%, #b388e6fa 100%);
     display: flex;
     justify-content: center;
     align-items: center;
