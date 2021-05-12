@@ -1,36 +1,6 @@
- /* //////////////////////// CONTENTS ///////////////////////////// */
-body{
-  overflow-x: hidden;
-} 
- body,
- html { 
-   padding-left: -10px ;
-     height: 40vh;  
-     width: 101%;
-     margin: 0;
-     font-family: cursive;
-     font-size: 20px;
-     font-weight: 400; 
-     background: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);        
-     background-size: 100% 300%;
-     overflow-bottom: hidden;
- }
-/*  
- .pimg1,
- .pimg2 {
-     height: 80vh;
-     background-size: cover;
-     -webkit-background-size: cover;
-     position: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     opacity: 1;
-     /*this is what make us have that parallax effects 
-if we wanna remove that effect we have to set to scroll
-     background-attachment: fixed;
- }
-  */
-  * {
+
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
@@ -41,7 +11,7 @@ html {
 }
 
 #banner {
-    background: url(bg.png);
+    background: url(resources/bg.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -69,6 +39,7 @@ html {
 .banner-text p {
     font-size: 40px;
     padding-left:20px;
+    padding-bottom: 120px;
 }
 
 .banner-btn {
@@ -146,22 +117,24 @@ nav ul li a {
     margin-top: 15px;
 }
 
-.section {  
+/* .section {  
     overflow-x: hidden;
       margin-top: 500px; 
       text-align: center;
       padding: 50px 80px; 
-  }
+  } */
   
   .section-light { 
-    margin-top: -50px;
-      background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    margin-top: 50px;
+      /* background-image:  linear-gradient(135deg, #7f53ac 0%, #647dee 74%); */
       color: black;
       font-family: cursive;
+      padding-bottom: 100px;
   }
   
   .section-light h1 {
       font-size: 40px;
+      text-align: center;
   }
   .section-dark {
       /* background-color: #4c4c4c; */
@@ -471,7 +444,7 @@ footer{
 
 @media screen and (max-width:700px) {
      #banner{
-        background: url(backgrd.png);
+        background: url(resources/backgrd.png);
         max-width:100%;
         height: auto;
     } 
