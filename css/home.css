@@ -62,8 +62,8 @@ html {
 
 .banner-text h1 {
     letter-spacing: 3px;
-    font-size: 120px;
-    padding-left:15px;
+    font-size: 60px;
+    padding-left:45px;
 }
 
 .banner-text p {
@@ -386,7 +386,7 @@ footer{
    width: 100px;
    height: 4px;
    background: #fc5c65; 
-   margin-left: 56px;
+   margin-left: 5px;
  }
  
  .newsletter-form{
