@@ -1,6 +1,5 @@
 
 
-
 * {
   margin: 0;
   padding: 0;
@@ -138,17 +137,19 @@ nav ul li a {
   width: 750px; 
   height: 500px;
   overflow: hidden;
+  padding-bottom: 100px;
 }
 .middle{
   position: absolute;
   margin-left: 25%;
+  
 }
 .middle h1{
 text-align: center;
 }
 .navigation{
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -358,6 +359,12 @@ input[type=submit]:hover {
   text-align: left;
   color: black;
 }
+.bordersep{ 
+margin-top: auto;
+height: 500px; 
+width: 10%; 
+color: black; 
+}
 footer{
 background: #f1f1f1;
 padding: 30px 0; 
@@ -371,7 +378,6 @@ font-family: "Open Sans",sans-serif;
 
  max-width: 1300px;
  margin: auto;
- padding-top: 600px;
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -494,6 +500,12 @@ font-family: "Open Sans",sans-serif;
    width: 100%;
    margin-bottom: 60px;
  }
+ .bordersep{ 
+  margin-top: auto;
+  height: 0px; 
+  width: 10%; 
+  color: black; 
+}
 
  .left-col{
    width: 100%;
@@ -564,6 +576,10 @@ font-family: "Open Sans",sans-serif;
   }
 
 }
+
+
+
+
 
 
 
