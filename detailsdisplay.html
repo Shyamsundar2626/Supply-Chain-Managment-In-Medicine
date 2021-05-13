@@ -401,17 +401,17 @@
                 //Display the Medicine
             contract.methods.fetchMedicineBufferOne(batchno).call(function(err, result) {
                 console.log(err, result)
-                document.write(result[0] + "\n")
-                document.write("<br>" + result[1] + "<br>")
-                document.write(result[2] + "<br>")
-                document.write(result[3] + "<br>")
-                document.write(result[4] + "<br>")
+                    /*document.write(result[0] + "\n")
+                    document.write("<br>" + result[1] + "<br>")
+                    document.write(result[2] + "<br>")
+                    document.write(result[3] + "<br>")
+                    document.write(result[4] + "<br>")*/
 
-                /*$("#medicines1").text(result[0]);
+                $("#medicines1").text(result[0]);
                 $("#medicines2").text(result[1]);
                 $("#medicines3").text(result[2]);
                 $("#medicines4").text(result[3]);
-                $("#medicines5").text(result[4]);*/
+                $("#medicines5").text(result[4]);
 
 
             });
@@ -419,14 +419,14 @@
                 console.log(err, result)
                     //document.write(result.toString().trim())
                     //$("#medicines6").text(result[0]);
-                document.write(result[1] + "<br>")
-                document.write(result[2] + "<br>")
-                document.write(result[3] + "<br>")
-                document.write(result[4] + "<br>")
-                    /*$("#medicine7").text(result[1]);
-                    $("#medicines8").text(result[2]);
-                    $("#medicines9").text(result[3]);
-                    $("#medicines10").text(result[4]);*/
+                    // document.write(result[1] + "<br>")
+                    // document.write(result[2] + "<br>")
+                    // document.write(result[3] + "<br>")
+                    // document.write(result[4] + "<br>")
+                $("#medicine7").text(result[1]);
+                $("#medicines8").text(result[2]);
+                $("#medicines9").text(result[3]);
+                $("#medicines10").text(result[4]);
 
 
             });
