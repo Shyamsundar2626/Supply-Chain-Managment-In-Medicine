@@ -12,7 +12,7 @@ signupForm.addEventListener('submit',(e) => {
         console.log(cred.user); 
         window.alert("Account Created Sucessfully!!");
         const modal = document.querySelector('#sign-up'); 
-        window.location.href="qrcodereader.html";
+        window.location.href="qrcodeupload.html";
 
     }) 
     .catch((error) => {
