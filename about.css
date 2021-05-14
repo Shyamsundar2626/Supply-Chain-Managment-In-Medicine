@@ -95,11 +95,46 @@
     margin-top: 20px;
     font-size: 15px;   
     font-family: cursive;
+  } 
+  @media screen and (min-width:1024px) and (max-width:1366){ 
+    .services-section{
+      background: url(abtsection.gif);   
+      max-width: 850px; 
+      background-size: cover;
+      background-repeat: no-repeat; 
+      min-height: 100vh; 
+      overflow-x: hidden;
+    }
   }
-  
+  @media screen and (max-width:960px){
+    .services-section{
+      background: url(abtsection.gif);   
+      max-width: 850px; 
+      background-size: cover;
+      background-repeat: no-repeat; 
+      min-height: 100vh; 
+      overflow-x: hidden;
+    }
+  } 
+  @media screen and (max-width:960px){
+    .service-box{
+      width: 65.33%;
+      padding: 8px;
+      text-align: center;
+      color: #ddd;
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width:960px){
+    .service-desc{ 
+      margin-top: 20px;
+      font-size: 15px;   
+      font-family: cursive;
+    }
+  }
   @media screen and (max-width:960px) {
     .service-box{
-      max-width: 45%;
+      max-width: 40%;
     }
   }
   
