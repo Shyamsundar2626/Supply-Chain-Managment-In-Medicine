@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Blog</title>
+    <title>QRCode</title>
+    
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+   
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="qrcodeupload.css">
+    <link rel="stylesheet" href="navpage.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script> -->
+  
 </head>
 
 <body>
 
     <!-- header -->
-    <header>
+    <!-- <header>
         <div class="navigation-container">
             <div class="top-head">
                 <div class="web-name">
@@ -35,11 +40,11 @@
                             <i class = "fas fa-times"></i>
                         </span>
                 </div>
-            </div>
+            </div> -->
 
             <!-- nav bar -->
 
-            <div class="nav-bar" id="nav-bar">
+            <!-- <div class="nav-bar" id="nav-bar">
                 <nav>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -51,7 +56,7 @@
                 </nav>
             </div>
 
-            <!--social icons -->
+            <!--social icons 
             <div class="social-icons">
                 <ul>
                     <li>
@@ -69,7 +74,22 @@
                 </ul>
             </div>
         </div>
-    </header>
+    </header> -->
+    <div id="side-nav" style="right:-200px">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a><li>
+                <li><a href="signinregister.html">SignIn/Register</a></li>
+                <li><a href="companylist.html">Top Pharma Companies</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blogpage.html">Blog</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>   
+            </ul>
+        </nav>
+        <div id="menu-btn">
+            <img src="resources/menu.png" id="menu">
+        </div>
+    </div>
     <div class="content">
 
         <div class="banner-image">
@@ -82,11 +102,15 @@
             </div>
         </div>
         <a id="boxc"></a>
-        <section class="box1" style="background-image: linear-gradient(to top, #6fa6e6 0%, #b388e6fa 100%);">
-            <img src="https://www.allgeo.com/newtemp/images/t3/qr3.gif" height="600 " width="400">
+        <section class="box1" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+            
             <div class="inner-banner-image1">
                 <div class="banner-image-content1">
                     <form role="form" id="form" action="" method="GET">
+                        <h1 style="text-align: center; padding-top: 20px; font-weight: bold;">Upload QR Code here</h1>
+                        <div class="imgalign">
+                            <img src="https://www.allgeo.com/newtemp/images/t3/qr3.gif" >
+                    </div>
                         <div id="box">
 
                             <input class="file__upload" type="file" name="file" id="file" required>
@@ -532,6 +556,7 @@
         <p>Copyright &copy; Fakequipo. All Rights Reserved | Contact Us: +91 90000 00000</p>
     </div>
 </footer> -->
-<script src="qrcodeupload.js" async defer></script>
+<!-- <script src="qrcodeupload.js" async defer></script> -->
+<script src="navbarscript.js"></script>
 
 </html>

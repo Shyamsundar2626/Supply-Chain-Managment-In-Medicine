@@ -173,6 +173,9 @@ hr{
     font-weight: 300;
     text-transform: uppercase;
 }
+.banner-sub-content{
+    padding-top: 30px;
+}
 
 .hot-topic{
     overflow: hidden;
