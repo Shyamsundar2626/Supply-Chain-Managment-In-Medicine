@@ -10,7 +10,9 @@
 </head>
 
 <body>
-
+    <div class="loader">
+        <img src="dose-rx-icons.gif" alt="Loading..." />
+    </div>
     <div class="header">
         <div id="mainbox" onclick="openFunction()">&#9776; </div>
         <div id="menu" class="sidemenu">
@@ -443,6 +445,7 @@
 
         // Set Contract Address
         var contractAddress = '0x7cB621da612dB349Bcbc2CB8918E7C1C244Df672'; // Add Your Contract address here!!!
+        //var Address ='';
 
         // Set the Contract
         var contract = new web3.eth.Contract(contractAbi, contractAddress);
@@ -479,6 +482,12 @@
                     from: accounts[0]
                 });
             });
+        });
+    </script>
+    <script>
+        window.addEventListener("load", function() {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
         });
     </script>
 </body>
