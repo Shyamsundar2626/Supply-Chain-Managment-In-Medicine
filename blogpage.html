@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="blogpage.css">
+        <link rel="stylesheet" href="navpage.css">
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
         <!-- google fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         <!-- fontawesome -->
@@ -14,7 +16,7 @@
     </head>
     <body>
 
-        <!-- header -->
+        <!-- header
         <header>
             <div class = "navigation-container">
                 <div class = "top-head">
@@ -35,7 +37,7 @@
                     </div>
                 </div>
 
-                <!-- nav bar -->
+                nav bar 
 
                 <div class = "nav-bar" id = "nav-bar">
                     <nav>
@@ -49,7 +51,7 @@
                     </nav>
                 </div>
 
-                <!--social icons -->
+                <!--social icons 
                 <div class = "social-icons">
                     <ul>
                         <li>
@@ -67,8 +69,22 @@
                     </ul>
                 </div>
             </div>
-        </header>
-
+        </header> -->
+        <div id="side-nav" style="right:-200px">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a><li>
+                    <li><a href="signinregister.html">SignIn/Register</a></li>
+                    <li><a href="companylist.html">Top Pharma Companies</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blogpage.html">Blog</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>   
+                </ul>
+            </nav>
+            <div id="menu-btn">
+                <img src="resources/menu.png" id="menu">
+            </div>
+        </div>
         <section class = "banner">
             <div class = "banner-main-content">
                 <h2>NEWS ARTICLES RELATED TO FAKE MEDICINES</h2>
@@ -136,6 +152,6 @@
             
         </footer>
 
-        <script src="blogpage.js" async defer></script>
+        <script src="navbarscript.js"></script>
     </body>
 </html>
