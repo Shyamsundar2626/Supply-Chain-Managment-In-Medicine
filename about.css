@@ -1,70 +1,81 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: "montserrat",sans-serif;
+    font-family: "montserrat", sans-serif;
     box-sizing: border-box;
-  }
-  
-  .services-section{
-    background: url(abtsection.gif); 
-    background-size: 100% 100%;  
+}
+
+.services-section {
+    background: url(abtsection.gif);
+    background-size: 100% 100%;
     max-width: 100%;
     background-repeat: no-repeat;
-    padding: 50px 0px ; 
+    padding: 0px 0px;
     min-height: 100vh;
-  }
-  .inner-width{
+    overflow-x: hidden;
+}
+
+.inner-width {
     width: 120%;
     max-width: 1500px;
     margin: auto;
     padding: 0 -200px;
     overflow: visible;
-  }
-  .section-title{
+}
+
+.section-title {
     text-align: center;
-    color: #ddd; 
+    color: #ddd;
     text-transform: uppercase;
     font-size: 30px;
-  } 
-  .section-title span{
+}
+
+.section-title span {
     text-align: center;
-    color: #82ccdd;  
+    color: #82ccdd;
     text-transform: uppercase;
     font-size: 35px;
-  } 
-  .border0{
+}
+
+.border0 {
     width: 220px;
     height: 2px;
     background: #82ccdd;
     margin: 25px auto;
-  } 
-  .border{
+}
+
+.border {
     width: 160px;
     height: 2px;
     background: #82ccdd;
     margin: 25px auto;
-  } 
-  .border1{
+}
+
+.border1 {
     width: 100px;
     height: 2px;
     background: #82ccdd;
     margin: 25px auto;
-  }
-  .services-container{
+}
+
+.services-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .service-box{
-    max-width: 33.33%;
+    overflow-x: hidden;
+}
+
+.service-box {
+    max-width: 38.33%;
     padding: 10px;
     text-align: center;
     color: #ddd;
     cursor: pointer;
-  }
-  
-  .service-icon{
+    margin-right: 130px;
+    overflow-x: hidden;
+}
+
+.service-icon {
     display: inline-block;
     width: 70px;
     height: 70px;
@@ -74,79 +85,87 @@
     margin-bottom: 30px;
     margin-top: 70px;
     transition: 0.3s linear;
-  }
-  .service-icon i{
+}
+
+.service-icon i {
     line-height: 70px;
     transform: rotate(-45deg);
     font-size: 26px;
-  }
-  .service-box:hover .service-icon{
-    background: #82ccdd; 
+}
+
+.service-box:hover .service-icon {
+    background: #82ccdd;
     transform: rotate(270deg);
     color: #ddd;
-  }
-  .service-title{ 
-    margin-top: 10px; 
+}
+
+.service-title {
+    margin-top: 10px;
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 20px;
-  }
-  .service-desc{ 
+}
+
+.service-desc {
     margin-top: 20px;
-    font-size: 15px;   
+    font-size: 15px;
     font-family: cursive;
-  } 
-  @media screen and (min-width:1024px) and (max-width:1366){ 
-    .services-section{
-      background: url(abtsection.gif);   
-      max-width: 850px; 
-      background-size: cover;
-      background-repeat: no-repeat; 
-      min-height: 100vh; 
-      overflow-x: hidden;
+}
+
+@media screen and (min-width:1024px) and (max-width:1366) {
+    .services-section {
+        background: url(abtsection.gif);
+        max-width: 850px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        overflow-x: hidden;
     }
-  }
-  @media screen and (max-width:960px){
-    .services-section{
-      background: url(abtsection.gif);   
-      max-width: 850px; 
-      background-size: cover;
-      background-repeat: no-repeat; 
-      min-height: 100vh; 
-      overflow-x: hidden;
+}
+
+@media screen and (max-width:960px) {
+    .services-section {
+        background: url(abtsection.gif);
+        max-width: 850px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        overflow-x: hidden;
     }
-  } 
-  @media screen and (max-width:960px){
-    .service-box{
-      width: 65.33%;
-      padding: 8px;
-      text-align: center;
-      color: #ddd;
-      cursor: pointer;
+}
+
+@media screen and (max-width:960px) {
+    .service-box {
+        width: 65.33%;
+        padding: 8px;
+        text-align: center;
+        color: #ddd;
+        cursor: pointer;
     }
-  }
-  @media screen and (max-width:960px){
-    .service-desc{ 
-      margin-top: 20px;
-      font-size: 15px;   
-      font-family: cursive;
+}
+
+@media screen and (max-width:960px) {
+    .service-desc {
+        margin-top: 20px;
+        font-size: 15px;
+        font-family: cursive;
     }
-  }
-  @media screen and (max-width:960px) {
-    .service-box{
-      max-width: 40%;
+}
+
+@media screen and (max-width:960px) {
+    .service-box {
+        max-width: 40%;
     }
-  }
-  
-  @media screen and (max-width:768px) {
-    .service-box{
-      max-width: 50%;
+}
+
+@media screen and (max-width:768px) {
+    .service-box {
+        max-width: 50%;
     }
-  }
-  
-  @media screen and (max-width:480px) {
-    .service-box{
-      max-width: 100%;
+}
+
+@media screen and (max-width:480px) {
+    .service-box {
+        max-width: 100%;
     }
-  }
-  
+}

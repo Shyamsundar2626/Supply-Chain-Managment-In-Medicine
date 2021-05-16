@@ -1,88 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add medicine Forms</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="navbar.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QRCode</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="qrcodeupload.css">
+    <link rel="stylesheet" href="navpage.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <!-- <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script> -->
+
 </head>
 
 <body>
 
-    <div class="header">
-        <div id="mainbox" onclick="openFunction()">&#9776; </div>
-        <div id="menu" class="sidemenu">
-            <a href="index.html">Home</a>
-            <a href="signinregister.html">SignIn/Register</a>
-            <a href="about.html">About Us</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="index.html">Logout</a>
-            <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
-        </div>
-    </div>
-    <div class="wrapper">
-        <div class="title">
-            Add medicine Forms
-        </div>
-        <form role="form" id="manufacturerform" action="" method="GET">
-            <div class="inputs">
-                <div class="inputfield">
-                    <label>batchno:</label>
-                    <input id="batchno" type="text" class="input" required>
+    <!-- header -->
+    <!-- <header>
+        <div class="navigation-container">
+            <div class="top-head">
+                <div class="web-name">
+                    <h1>FAKEQUIPO</h1>
                 </div>
-                <div class="inputfield">
-                    <label>medicine Name</label>
-                    <input id="medicineName" type="text" class="input" required>
+
+                <div class="ham-btn">
+                    <span>
+                            <i class = "fas fa-bars"></i>
+                        </span>
                 </div>
-                <div class="inputfield">
-                    <label>dosage</label>
-                    <input id="dosage" type="text" class="input" required>
+
+                <div class="times-btn">
+                    <span>
+                            <i class = "fas fa-times"></i>
+                        </span>
                 </div>
-                <div class="inputfield">
-                    <label>metamask id:</label>
-                    <input id="originManufacturerID" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>mfgdate:</label>
-                    <input id="mfgdate" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>expdate:</label>
-                    <input id="expdate" type="text" class="input" required>
-                </div>
-                <div class="inputfield">
-                    <label>FactoryName:</label>
-                    <input id="FactoryName" type="text" class="input" required>
-                </div>
-                <input class="button" type="submit" value="Submit">
-                <input class="button" type="button" value="Make" id="click">
+            </div> -->
+
+    <!-- nav bar -->
+
+    <!-- <div class="nav-bar" id="nav-bar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">SignIn/Register</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-        </form>
+
+            <!--social icons 
+            <div class="social-icons">
+                <ul>
+                    <li>
+                        <a href="#"><i class = "fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class = "fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class = "fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header> -->
+    <div id="side-nav" style="right:-200px">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a>
+                    <li>
+                        <li><a href="signinregister.html">SignIn/Register</a></li>
+                        <li><a href="companylist.html">Top Pharma Companies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blogpage.html">Blog</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+        <div id="menu-btn">
+            <img src="resources/menu.png" id="menu">
+        </div>
     </div>
-    <script>
-        function success() {
-            window.alert("Successful");
-            window.location.href = "download.html";
-        }
-    </script>
+    <div class="content">
 
-    <script type="text/javascript">
-        function openFunction() {
-            document.getElementById("menu").style.width = "300px";
-            document.getElementById("mainbox").style.marginLeft = "300px";
-            document.getElementById("mainbox");
-        }
+        <div class="banner-image">
+            <div class="inner-banner-image">
+                <div class="banner-image-content">
+                    <h1>Fakequipo</h1><br>
+                    <p>QR Code Scanner</p><br>
+                    <a href="#boxc"> <button class="button">Click here</button></a>
+                </div>
+            </div>
+        </div>
+        <a id="boxc"></a>
+        <section class="box1" style="background-color: #744ad4;background: linear-gradient(315deg, #6023d1 20%, #4476e0 90%);">
 
-        function closeFunction() {
-            document.getElementById("menu").style.width = "0px";
-            document.getElementById("mainbox").style.marginLeft = "0px";
-            document.getElementById("mainbox").innerHTML = "&#9776;";
-        }
-    </script>
+            <div class="inner-banner-image1">
+                <div class="banner-image-content1">
+                    <form role="form" id="form" action="" method="GET">
+                        <h1 style="text-align: center;color:white; padding-top: 20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-style: italic;
+                        font-weight: bold;">Upload QR Code here</h1>
+                        <div class="imgalign">
+                            <img src="https://www.allgeo.com/newtemp/images/t3/qr3.gif">
+                        </div>
+                        <div id="box">
+
+                            <input class="file__upload" type="file" name="file" id="file" required>
+                            <button class="btn" onclick="val();" required>submit</button>
+                            <p style="margin-right:20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                            font-style: italic;color:white;font-weight: bold;font-size:25px;">Qr Content:<span id="content"></span></p>
+                            <!--To Read QR code -->
+                            <script type="text/javascript" src="qrReader.js"></script>
+
+                            <input class="qrcode" type="text" id="scan" placeholder="Code" style="background:transparent; color:white;box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);">
+                            <input class="btn" type="submit" value="Submit">
+                            <div class="medicinedisplay">
+                                <h1 style="padding-top:20px;color:white;">Medicine Details Display</h1>
+                                <br>
+                                <div class="banner-image-content2">
+                                    <p id="medicines1"></p>
+                                    <p id="medicines2"></p>
+                                    <p id="medicines3"></p>
+                                    <p id="medicines4"></p>
+                                    <p id="medicines5"></p>
+                                    <!--p id="medicines6"></p-->
+                                    <p id="medicine7"></p>
+                                    <p id="medicines8"></p>
+                                    <p id="medicines9"></p>
+                                    <p id="medicines10"></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <script>
+                        function val() {
+                            var item = document.getElementById("content").innerText;
+                            document.getElementById("scan").value = item;
+                        }
+                        // function val1(){
+                        //     window.location.href="detailsdisplay.html";
+                        // }
+                    </script>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!--script src="js/app.1.js"></script-->
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract copy.js"></script>
     <script>
@@ -375,7 +452,7 @@
                 "type": "string"
             }, {
                 "internalType": "enum main.State",
-                "name": "",
+                "name": "Made",
                 "type": "uint8"
             }, {
                 "internalType": "address",
@@ -446,41 +523,60 @@
 
         // Set the Contract
         var contract = new web3.eth.Contract(contractAbi, contractAddress);
-
-        /*Display the Greeting
-        contract.methods.greet().call(function(err, result) {
-          console.log(err, result)
-          $('#greeting').html(result);
-        });*/
-
-        // Change the Greeting
         $('form').on('submit', function(event) {
             event.preventDefault();
-            batchno = $("#batchno").val();
-            medicineName = $("#medicineName").val();
-            dosage = $("#dosage").val();
-            //App.ownerID = $("#ownerID").val();
-            originManufacturerID = $("#originManufacturerID").val();
-            ownerID = $("#originManufacturerID").val();
-            mfgdate = $("#mfgdate").val();
-            expdate = $("#expdate").val();
-            FactoryName = $("#FactoryName").val();
-            medicineState = 1
-            distributorID = '0x015f9674BC986c5a37B796A44c3a5223b9E2D973'
-            userID = '0x7BD1a8DB4Ce9bB2a61572E5535bF3961B88807B0'
+            batchno = $("#scan").val();
             console.log(batchno)
-            console.log(medicineName)
-            console.log(dosage)
-            console.log(originManufacturerID)
-            console.log(expdate)
-            console.log(FactoryName)
-            web3.eth.getAccounts().then(function(accounts) {
-                contract.methods.makeMedicine(batchno, medicineName, dosage, originManufacturerID, ownerID, mfgdate, expdate, FactoryName, medicineState, distributorID, userID).send({
-                    from: accounts[0]
-                });
+                //Display the Medicine
+            contract.methods.fetchMedicineBufferOne(batchno).call(function(err, result) {
+                console.log(err, result)
+                    /*document.write(result[0] + "\n")
+                    document.write("<br>" + result[1] + "<br>")
+                    document.write(result[2] + "<br>")
+                    document.write(result[3] + "<br>")
+                    document.write(result[4] + "<br>")*/
+                if (result[0] == "") {
+
+                    $("#medicines1").text('QR Code is invalid. Your Medicine is FALSIFIED!!!!' + "\r");
+                } else {
+
+                    $("#medicines1").text('Batch No: ' + "\r" + result[0]);
+                    $("#medicines2").text('Medicine Name: ' + '\r' + result[1]);
+                    $("#medicines3").text('Manufacturer ID:' + '\r' + result[2]);
+                    $("#medicines4").text('Supplier ID:' + '\r' + result[3]);
+                    $("#medicines5").text('Dosage:  ' + '\r' + result[4]);
+                }
+
+            });
+            contract.methods.fetchMedicineBufferTwo(batchno).call(function(err, result) {
+                console.log(err, result)
+                    //document.write(result.toString().trim())
+                    //$("#medicines6").text(result[0]);
+                    // document.write(result[1] + "<br>")
+                    // document.write(result[2] + "<br>")
+                    // document.write(result[3] + "<br>")
+                    // document.write(result[4] + "<br>")
+                if (result[0] == "") {
+
+
+                } else {
+                    $("#medicine7").text('Manufacturing Date:' + '\r' + result[1]);
+                    $("#medicines8").text('Expiry Date:' + '\r' + result[2]);
+                    $("#medicines9").text('Company Name: ' + '\r' + result[3]);
+                    $("#medicines10").text('Consumer ID:' + '\r' + result[4]);
+                }
+
             });
         });
     </script>
+
 </body>
+<!-- <footer>
+    <div class="container">
+        <p>Copyright &copy; Fakequipo. All Rights Reserved | Contact Us: +91 90000 00000</p>
+    </div>
+</footer> -->
+<!-- <script src="qrcodeupload.js" async defer></script> -->
+<script src="navbarscript.js"></script>
 
 </html>
