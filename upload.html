@@ -13,7 +13,10 @@
 </head>
 
 <body>
-
+    <div class="loader">
+        <img src="dose-rx-icons.gif" alt="Loading..." />
+    </div>
+    <header></header>
     <div class="file__upload">
         <div class="header">
             <p><i class="fa fa-cloud-upload fa-2x"></i><span><span>up</span>load</span>
@@ -81,6 +84,12 @@
             document.getElementById("mainbox").style.marginLeft = "0px";
             document.getElementById("mainbox").innerHTML = "&#9776;";
         }
+    </script>
+    <script>
+        window.addEventListener("load", function() {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
+        });
     </script>
 </body>
 

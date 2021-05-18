@@ -20,9 +20,11 @@
 </head>
 
 <body>
-
-    <!-- header -->
-    <!-- <header>
+    <div class="loader">
+        <img src="dose-rx-icons.gif" alt="Loading..." />
+    </div>
+    <header></header>
+    <!--<header>
         <div class="navigation-container">
             <div class="top-head">
                 <div class="web-name">
@@ -105,7 +107,7 @@
         </div>
         <a id="boxc"></a>
         <section class="box1" style="background-color: #744ad4;background: linear-gradient(315deg, #6023d1 20%, #4476e0 90%);">
-
+            <!-- <section class="box1"> -->
             <div class="inner-banner-image1">
                 <div class="banner-image-content1">
                     <form role="form" id="form" action="" method="GET">
@@ -567,6 +569,12 @@
                 }
 
             });
+        });
+    </script>
+    <script>
+        window.addEventListener("load", function() {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
         });
     </script>
 

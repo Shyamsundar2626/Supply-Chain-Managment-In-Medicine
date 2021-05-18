@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    <div class="loader">
+        <img src="dose-rx-icons.gif" alt="Loading..." />
+    </div>
+    <header></header>
     <div id="side-nav" style="right:-200px">
         <nav>
             <ul>
@@ -113,6 +117,12 @@
     </div>
     </div>
     </footer> -->
+    <script>
+        window.addEventListener("load", function() {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
+        });
+    </script>
 </body>
 <script src="navbarscript.js"></script>
 

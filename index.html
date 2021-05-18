@@ -17,6 +17,10 @@
 </head>
 
 <body>
+    <div class="loader">
+        <img src="dose-rx-icons.gif" alt="Loading..." />
+    </div>
+    <header></header>
     <section id="banner">
         <!-- <img src="resources/gym-logo1.png" class="logo"> -->
         <div class="banner-text">
@@ -111,6 +115,12 @@
     <script src="navbarscript.js">
     </script>
     <script type="text/javascript" src="js/chatbot.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
+        });
+    </script>
 </body>
 
 </html>
