@@ -201,7 +201,7 @@ h1 {
     margin-left: 20px;
     cursor: pointer;
     transition: opacity .3s linear;
-}
+}    
 
 .btnsubmit:hover {
     opacity: .7;

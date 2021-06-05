@@ -11,10 +11,10 @@ menuBtn.onclick = function () {
     console.log(sideNav.style.right);
     if (sideNav.style.right.toString() == "-200px") {
         sideNav.style.right = "0";
-        menu.src = "resources/close.png";
+        menu.src = "images/resources/close.png";
     }
     else {
         sideNav.style.right = "-200px";
-        menu.src = "resources/menu.png";
+        menu.src = "images/resources/menu.png";
     }
 }
