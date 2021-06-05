@@ -35,13 +35,13 @@
 }
 
 .services-section {
-    background: url(abtsection.gif);
+    /*background: url('abtsection.jpg');
     background-size: 100% 100%;
     max-width: 100%;
     background-repeat: no-repeat;
     padding: 0px 0px;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden;*/
 }
 
 .inner-width {
